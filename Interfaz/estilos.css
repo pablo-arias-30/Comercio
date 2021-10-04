@@ -1,12 +1,37 @@
-body {
-    background-image: url("../Recursos/fondo.jpg") ;
-}
-h1{
-    color:burlywood;
-}
-h3{
-    color:blanchedalmond
-}
-address { margin-top: 1em;
+#cabecera {
+    background-image: url("../Recursos/fondo.jpg");
+    margin-top: 1em;
     padding-top: 1em;
-    border-top: thin dotted }
+    border-top: thin dotted
+}
+
+#logo {
+    margin-left: 1em;
+}
+
+h1 {
+    color: white
+}
+
+body {
+    background-color: blanchedalmond
+}
+
+h3 {
+    color: blanchedalmond;
+    border-color: black;
+}
+
+#link:visited {
+    color: lightseagreen
+}
+
+#link:link {
+    color: lightblue
+}
+
+address {
+    margin-top: 1em;
+    padding-top: 1em;
+    border-top: thin dotted
+}
