@@ -4,7 +4,6 @@ CREATE TABLE articulo (
   marca varchar(25) NOT NULL,
   tipo varchar(25) DEFAULT NULL CHECK ( tipo IN ( 'Gafas de sol', 'Gafas de cerca', 'Gafas de lejos','Gafas progresivas', 'lentillas')),
   precio float(7,2) NOT NULL,
-  graduacion varchar (30) DEFAULT NULL,
   color varchar(15) DEFAULT NULL,
   codA integer(10) NOT NULL REFERENCES almacen(codA) ON UPDATE CASCADE,
   codP integer (20) NOT NULL REFERENCES proveedor(codP) ON UPDATE CASCADE,
@@ -39,7 +38,8 @@ CREATE TABLE IF NOT EXISTS cliente (
   nombre varchar(60) NOT NULL,
   telefono integer NOT NULL UNIQUE,
   direccion varchar (100) NOT NULL,
-  correo varchar(75) NOT NULL
+  correo varchar(25) NOT NULL,
+  graduacion varchar (100) DEFAULT NULL
     );
 
 CREATE TABLE IF NOT EXISTS compra (

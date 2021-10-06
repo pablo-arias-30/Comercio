@@ -1,12 +1,12 @@
-INSERT INTO cliente (dni, nombre, telefono, direccion, correo) VALUES
-( '74560661C', 'Cristiano Ronaldo',969000333, 'Avenida España, 16', 'cr7@comercio.es' ),
-( '82257405R', 'Miguel Herran', 967214500,'Calle Boteros, 4', 'miguelhe@comercio.es'),
-( '89275991L', 'Vinicius Ruescas', 653804053,'Calle Tejares, 5', 'vinijr@comercio.es'),
-( '62550311V', 'Rafa Nadal',969433363, 'Avenida Puerto Indias, 23', 'rafanadal@comercio.e'),
-( '28611552N', 'Rosario Flores',612458787, 'Calle Villar Encina, 62', 'rosaflowers@comercio'),
-( '90414531J', 'Ester Exposito', 666841377,'Avenida Concepción, 12', 'estero@comercio.es'),
-( '03203593S', 'David Bisbal', 601522533,'Calle Cuenca, 45', 'bisbi@comercio.es'),
-( '14635054Q', 'Luuk de Jong', 911885400, 'Calle Pizarro, 33', 'luuk@comercio.es');
+INSERT INTO cliente (dni, nombre, telefono, direccion, correo, graduacion) VALUES
+( '74560661C', 'Cristiano Ronaldo',969000333, 'Avenida España, 16', 'cr7@comercio.es','' ),
+( '82257405R', 'Miguel Herran', 967214500,'Calle Boteros, 4', 'miguelhe@comercio.es', '2,5 dioptrías en ambos ojos de astigamtismo'),
+( '89275991L', 'Vinicius Ruescas', 653804053,'Calle Tejares, 5', 'vinijr@comercio.es', '5 dioptrías ojo izquierdo astigmatimso, 1,5 dioptrías en ojo derecho hipermetropía'),
+( '62550311V', 'Rafa Nadal',969433363, 'Avenida Puerto Indias, 23', 'rafanadal@comercio.e','' ),
+( '28611552N', 'Rosario Flores',612458787, 'Calle Villar Encina, 62', 'rosaflowers@comercio', '1,5 ambos ojos astigmatismo'),
+( '90414531J', 'Ester Exposito', 666841377,'Avenida Concepción, 12', 'estero@comercio.es', '0,25 astigmatismo ambos ojos'),
+( '03203593S', 'David Bisbal', 601522533,'Calle Cuenca, 45', 'bisbi@comercio.es', ''),
+( '14635054Q', 'Luuk de Jong', 911885400, 'Calle Pizarro, 33', 'luuk@comercio.es','' );
 
 INSERT INTO compra (IDCompra, fechaCompra, precio, direccionEnvio, fechaPago, dniCliente) VALUES 
 (1,'2021/03/21','210','Avenida de España 43, Albacete','2021/03/22','49256124Y'),
@@ -22,13 +22,13 @@ INSERT INTO proveedor VALUES
  INSERT INTO almacen VALUES 
 (1,'Madrid',3000),(2,'Valencia',2300),(3,'Albacete',2500);
 
-INSERT INTO articulo (IDArt, nombre, marca, tipo, precio, graduacion, color, codA, codP, IDCompra) VALUES
-(1, 'Gafas de sol graduadas deluxe Tommy Hilfiger', 'Tommy Hilfiger', 'Gafas de sol', '120','3.5 ambos ojos','Negro','1','1' ,'1'),
-(2, 'Gafas de sol Polaroid', 'Polaroid', 'Gafas de sol', '50', '','Gris','1','2', '2'),
-(3, 'Gafas de sol Carrera', 'Carrera', 'Gafas de sol', '60','','Negro','1','2', '3'),
-(4, 'Gafas progresivas Carolina Herrera','Carolina Herrera', 'Gafas progresivas', '187.50', '5.00 en ambos ojos','Rosa', '2', '1', '4'),
-(5, 'Gafas de cerca Ray-Ban', 'Ray-Ban', 'Gafas de cerca', '180', '1.25 ojo derecho, 0 ojo izquierdo', 'Rojo','3', '3','4'),
-(6, 'Gafas progresivas Lacoste', 'Lacoste', 'Gafas progresivas', '90','' , 'Dorado', '3', '2','1');
+INSERT INTO articulo (IDArt, nombre, marca, tipo, precio, color, codA, codP, IDCompra) VALUES
+(1, 'Gafas de sol graduadas deluxe Tommy Hilfiger', 'Tommy Hilfiger', 'Gafas de sol', '120','Negro','1','1' ,'1'),
+(2, 'Gafas de sol Polaroid', 'Polaroid', 'Gafas de sol', '50','Gris','1','2', '2'),
+(3, 'Gafas de sol Carrera', 'Carrera', 'Gafas de sol', '60','Negro','1','2', '3'),
+(4, 'Gafas progresivas Carolina Herrera','Carolina Herrera', 'Gafas progresivas', '187.50','Rosa', '2', '1', '4'),
+(5, 'Gafas de cerca Ray-Ban', 'Ray-Ban', 'Gafas de cerca', '180', 'Rojo','3', '3','4'),
+(6, 'Gafas progresivas Lacoste', 'Lacoste', 'Gafas progresivas', '90','Dorado', '3', '2','1');
 
 INSERT INTO suministra VALUES
  (1,2),(1,3),(3,5),(2,4),(4,1);
