@@ -53,9 +53,15 @@ CREATE TABLE IF NOT EXISTS compra (
 
 
 CREATE TABLE IF NOT EXISTS lineacompra(
-  IDLineaPedido integer(15) primary key,
+  IDLineaCompra integer(15) primary key,
   unidades integer NOT NULL,
   precio float(7,2) NOT NULL,
   IDCompra integer(15) NOT NULL REFERENCES compra (IDCompra) ON UPDATE CASCADE,
   IDArt integer (10) NOT NULL REFERENCES articulo (IDArt) ON UPDATE CASCADE
 );
+
+CREATE TABLE IF NOT EXISTS contiene(
+    IDArt integer NOT NULL REFERENCES articulo (IDArt) ON DELETE CASCADE ON UPDATE CASCADE,
+    codA char(3) NOT NULL REFERENCES almacen (codA) ON DELETE CASCADE ON UPDATE CASCADE,
+    primary key (IDArt,codA)
+    );
