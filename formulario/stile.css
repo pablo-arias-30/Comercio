@@ -1,0 +1,64 @@
+body {
+    padding-left: 8em;
+    font-family: "Times New Roman", Times;
+    color: black;
+    background-color: white
+}
+h1{
+    text-align: center;
+}
+h2{
+    font-family: "Times New Roman", Times;
+}
+h3{
+    font-family: "Times New Roman", Times;
+}
+.form-registro{
+    width:400px;
+    background:rgb(36, 36, 36);
+    padding:30px;
+    margin:auto;
+    margin-top:50px;
+    border-radius: 10px;
+    font-family: "Times New Roman", Times;
+    color:white;
+}
+.form-registro h3{
+    font-size: 22px;
+    margin-bottom: 20px;
+    font-family: "Times New Roman", Times;
+}
+.controls{
+    width:100%;
+    background: rgb(105, 105, 105);
+    padding: 5px;
+    border-radius: 5px;
+    border:2px solid blue;
+    font-family: "Times New Roman", Times;
+    font-size: 18px;
+}
+.form-registro p{
+    height:60px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 60px;
+}
+.form-registro a:hover{
+    color: white;
+    text-decoration: underline;
+}
+.form-registro .botones{
+    width:100%;
+    background: blue;
+    border: none;
+    padding:12px;
+    color:white;
+    margin: 16px 0;
+    font-size: 16px;
+}
+.form-registro .check{
+    padding:12px;
+    position:absolute;
+    top:905px;
+    left:520px
+}
