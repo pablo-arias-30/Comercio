@@ -4,61 +4,73 @@ body {
     color: black;
     background-color: white
 }
-h1{
+
+h1 {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
 }
-h2{
-    font-family: "Times New Roman", Times;
+
+a {
+    color: lightblue;
 }
-h3{
-    font-family: "Times New Roman", Times;
-}
-.form-registro{
-    width:400px;
-    background:rgb(36, 36, 36);
-    padding:30px;
-    margin:auto;
-    margin-top:50px;
+
+.form-registro {
+    width: 400px;
+    background: rgb(36, 36, 36);
+    padding: 30px;
+    margin: auto;
+    margin-top: 50px;
     border-radius: 10px;
-    font-family: "Times New Roman", Times;
-    color:white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
 }
-.form-registro h3{
+
+.form-registro h3 {
     font-size: 22px;
     margin-bottom: 20px;
-    font-family: "Times New Roman", Times;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.controls{
-    width:100%;
-    background: rgb(105, 105, 105);
+
+.controls {
+    width: 100%;
+    background: white;
     padding: 5px;
     border-radius: 5px;
-    border:2px solid blue;
-    font-family: "Times New Roman", Times;
+    border: 2px solid blue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 18px;
 }
-.form-registro p{
-    height:60px;
+
+.form-registro p {
+    height: 60px;
     text-align: center;
     font-size: 18px;
     line-height: 60px;
 }
-.form-registro a:hover{
+
+.form-registro a:hover {
     color: white;
     text-decoration: underline;
 }
-.form-registro .botones{
-    width:100%;
+
+.form-registro .botones {
+    width: 100%;
     background: blue;
     border: none;
-    padding:12px;
-    color:white;
+    padding: 12px;
+    color: white;
     margin: 16px 0;
     font-size: 16px;
 }
-.form-registro .check{
-    padding:12px;
-    position:absolute;
-    top:905px;
-    left:520px
+
+.form-registro .check {
+    padding: 12px;
+    position: absolute;
+    top: 1125px;
+    left: 520px
 }
