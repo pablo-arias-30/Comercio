@@ -1,14 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Scipt');
 body {
     padding-left: 8em;
     font-family: "Times New Roman", Times;
     color: black;
-    background-color: white
+    background-image:url('https://www.pinterest.es/pin/493144227947033562/') ;
+    
 }
+img{
+    width: 200px;height:200px;
+    position:absolute;
+    top:1em;
+    left:1em;
+}
+
 h1{
     text-align: center;
+    display:inline-block;
+    position:relative;
+    left:400px;
+    font-family: 'Dancing Script', cursive;
+}
+h1::after,h1::before{
+    content:'';
+    position:absolute;
+    width: 200px;
+    height:3px;
+    background-color: black;
+    top:0.6em;
+}
+h1::before{
+    left:-220px;
+}
+h1::after{
+    right: -220px;
 }
 h2{
-    font-family: "Times New Roman", Times;
+    text-align: center;
+    right: -220px;
+    font-family: 'Dancing Script', cursive;
 }
 h3{
     font-family: "Times New Roman", Times;
@@ -59,6 +88,29 @@ h3{
 .form-registro .check{
     padding:12px;
     position:absolute;
-    top:905px;
+    top:945px;
     left:520px
+}
+.Menu{
+    position: relative;
+    top:40px;
+    float:right;
+    width:30%;
+    overflow: hidden;
+}
+.Menu a{
+    box-sizing: border-box;
+    margin:0px;
+    background-color: black;
+    color:white;
+    text-decoration: none;
+    padding: 20px;
+    display: block;
+
+}
+
+.Menu a:hover{
+    background-color: white;
+    color:black;
+
 }
