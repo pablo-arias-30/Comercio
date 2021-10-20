@@ -7,11 +7,25 @@
 
 #logo {
     margin-left: 1em;
+    width: 120px;
+    height: 85px;
+    position: top-left;
 }
 
 h1 {
     color: white
 }
+
+h2{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    clear: inherit
+}
+
+#usuario {
+    width: 110px;
+    height: 100px;
+}
+
 
 body {
     background-color: blanchedalmond
