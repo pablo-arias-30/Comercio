@@ -6,7 +6,7 @@ body {
     background-image:url('https://www.pinterest.es/pin/493144227947033562/') ;
     
 }
-<<<<<<< HEAD
+
 img{
     width: 200px;height:200px;
     position:absolute;
@@ -39,17 +39,6 @@ h2{
     text-align: center;
     right: -220px;
     font-family: 'Dancing Script', cursive;
-=======
-
-h1 {
-    text-align: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-h2 {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-align: center;
->>>>>>> 0987d8252867c54a882a70c8642882e5e1c4e59b
 }
 
 a {
@@ -104,7 +93,7 @@ a {
     margin: 16px 0;
     font-size: 16px;
 }
-<<<<<<< HEAD
+
 .form-registro .check{
     padding:12px;
     position:absolute;
@@ -133,12 +122,11 @@ a {
     background-color: white;
     color:black;
 
-=======
+}
 
 .form-registro .check {
     padding: 12px;
     position: absolute;
     top: 1125px;
     left: 520px
->>>>>>> 0987d8252867c54a882a70c8642882e5e1c4e59b
 }
