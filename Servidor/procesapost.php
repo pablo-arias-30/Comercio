@@ -6,11 +6,11 @@ $conexion->set_charset('utf8');
 //establece el conjunto de caracteres en la conexión, para que no haya problema de acentos y ñ de los campos
 if ($conexion->connect_error) {
     die('Error en la conexion' . $connect_error);
-}
+}else{
 $resultado = mysqli_query($conexion, $sql);
 if (!$resultado) {
     die("No se puede realizar la consulta $conexion errno': $conexion->error");
-}
+}else{
 while ($registro = $resultado->fetch_assoc()) {
     echo $registro['IDCompra']."\n";
     echo $registro['fechaCompra']."\n";
@@ -19,8 +19,8 @@ while ($registro = $resultado->fetch_assoc()) {
     echo $registro['direccionEnvio']."\n";
     echo $registro['fechaPago']."\n";
     echo $registro['dniCliente']."\n";
-
 }
-
-mysqli_close($conexion);
+    mysqli_close($conexion);
+}
+}
 ?>

@@ -4,7 +4,7 @@
 <head>
     <meta charset=utf-8 />
     <link rel="stylesheet" href="stile.css" type="text/css">
-    <title>Registrarse</title>
+    <title>Iniciar Sesión</title>
 </head>
 
 <body>
@@ -12,18 +12,8 @@
     <a href="index.html"><img id="img1" src="../Recursos/VISUALVISION.png"></a>
     <a href="compra.html"><img id="compra" src="../Recursos/carrito.png"></a>
     <a href="miperfil.html"><img id="usuario" src="../Recursos/usuario.png"></a>
-
-    <div id="fondo">
-        <img src="../Recursos/bienvenidos.jpg" width="180%" height="120%"/>
-        <div class="texto">
-            <h2>¡Bienvenido!</h2>
-            <h2>Tu visión no tiene precio</h2>
-            <h2>Tu visión no tiene precio</h2>
-            <h2>Tu visión no tiene precio</h2>
-        </div>
-        <br> <br> <br> <br> <br>
-    </div>
-
+    
+    
     <ul class="Menu">
         <li><a href="index.html">PÁGINA PRINCIPAL</a></li>
         <li><a href="index.html">CATÁLOGO</a>
@@ -42,6 +32,19 @@
         <li> <a href=" ">PEDIR CITA</a></li>
 
     </ul>
+    <div id="fondo2">
+    <section class="form-registro">
+        <h3>Introduce tus credenciales</h3>
+        <form action="../Servidor/procesapost.php" method="POST">
+        Introduzca su email:<br><br>
+        <input class="controls" type="text" name="email" placeholder="Correo electrónico"><br><br>
+        Introduzca su contraseña:<br><br>
+        <input class="controls" type="password" name="contraseña" placeholder="Contraseña"><br>
+        <input class="botones" type="submit" value="Iniciar sesión">
+        <p>¿Nuevo usuario? Regístrate <a href="formulario.html">aquí</a></p>
+        </form>
+    </section>
+</div>
 </body>
 
 </html>
