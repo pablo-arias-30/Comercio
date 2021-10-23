@@ -2,32 +2,35 @@
     margin-left: 1.5%;
     clear: both;
 }
+
 #gafas {
     margin-left: 23%;
     margin-top: 2%;
     width: 234px;
     padding: 2%;
     padding-right: 0%;
-    border:solid;
+    border: solid;
     border-width: 2px;
     border-color: darkgray;
-    display:inline-block;
+    display: inline-block;
 }
+
 #marca {
     height: 50px;
     width: 100px;
     margin-left: 22%;
     display: inline-block;
 }
+
 #g1 {
-   
     height: 200px;
     width: 200px;
 }
-#p1{
+
+#p1 {
     text-align: center;
     width: 220px;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 #gafas2 {
@@ -36,13 +39,13 @@
     width: 234px;
     padding: 2%;
     padding-right: 0%;
-    border:solid;
+    border: solid;
     border-width: 2px;
     border-color: darkgray;
-    display:inline-block;
+    display: inline-block;
 }
 
-#usuario{
+#usuario {
     float: right;
     width: 35px;
     height: 35px;
@@ -50,14 +53,13 @@
     margin-right: 15px;
 }
 
-#compra{
+#compra {
     float: right;
     width: 35px;
     height: 35px;
     margin-top: 20px;
     margin-right: 10px;
 }
-
 
 h1 {
     text-align: center;
@@ -80,7 +82,7 @@ h1::after {
     width: 100%;
     background-color: whitesmoke;
 }
- 
+
 h2 {
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
@@ -92,6 +94,7 @@ a {
 }
 
 ul, li {
+    color: black;
     list-style: none;
 }
 
@@ -123,7 +126,6 @@ ul, li {
 }
 
 .form-registro p {
-    
     height: 60px;
     text-align: center;
     font-size: 18px;
@@ -145,10 +147,7 @@ ul, li {
     font-size: 16px;
 }
 
-
-
 .Menu {
-    float: left;
     width: 15%;
     overflow: hidden;
     position: absolute;
@@ -168,19 +167,18 @@ ul, li {
 }
 
 .Menu li a:hover {
-    background-color: rgb(98, 209, 209)   ;
+    background-color: rgb(98, 209, 209);
     color: black;
 }
 
 .Menu li ul {
     display: none;
-    position:static;
+    position: static;
 }
 
 .Menu li:hover>ul {
     display: block;
 }
-
 
 #fondo {
     margin-top: 2%;
@@ -190,8 +188,40 @@ ul, li {
     display: inline-block;
 }
 
-#fondo2{
+#nombrePerfil {
+    font-family: sans-serif;
+    position: absolute;
+    top: 12%;
+    right: 7%;
+    font-size: 1.5em;
+    font-weight: lighter;
+}
+
+.perfil {
+    margin-top: 2%;
+    margin-left: 18%;
+    margin-right: 5%;
+    border: 2px;
+    border-color: black;
+    border-style: solid;
+}
+
+#fondo2 {
     background-image: url("../Recursos/fondo.jpg");
     margin-left: 18%;
     margin-right: 5%;
+}
+
+.dentro ul {
+    margin: 7px;
+    padding-left: 20px;
+}
+
+.dentro li a {
+    display: inline-block;
+    text-decoration: none;
+    margin: 0.5px;
+    color: black;
+    font-family: sans-serif;
+    font-size: 2em;
 }

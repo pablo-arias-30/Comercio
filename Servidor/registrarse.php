@@ -8,7 +8,7 @@ function procesaResultado($resultado)
     }
     echo '<script type="text/javascript">
     alert("Las credenciales introducidas son incorrectas. Es posible que el DNI o correo ya esté en uso. Vuelva a intentarlo porfavor");
-    window.location.href="../Interfaz/formulario.html";
+    window.location.href="../Interfaz/registro.html";
     </script>';
 }
 
@@ -41,7 +41,7 @@ if ($_POST) {
     } else {
         echo '<script type="text/javascript">
     alert("Debe introducir todos los campos, vuelva a intentarlo porfavor");
-    window.location.href="../Interfaz/formulario.html";
+    window.location.href="../Interfaz/registro.html";
     </script>';
     }
 }
