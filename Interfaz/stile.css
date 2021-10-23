@@ -1,6 +1,47 @@
 #img1 {
     margin-left: 1.5%;
+    clear: both;
 }
+#gafas {
+    margin-left: 23%;
+    margin-top: 2%;
+    width: 234px;
+    padding: 2%;
+    padding-right: 0%;
+    border:solid;
+    border-width: 2px;
+    border-color: darkgray;
+    display:inline-block;
+}
+#marca {
+    height: 50px;
+    width: 100px;
+    margin-left: 22%;
+    display: inline-block;
+}
+#g1 {
+   
+    height: 200px;
+    width: 200px;
+}
+#p1{
+    text-align: center;
+    width: 220px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#gafas2 {
+    margin-left: 4%;
+    margin-top: 2%;
+    width: 234px;
+    padding: 2%;
+    padding-right: 0%;
+    border:solid;
+    border-width: 2px;
+    border-color: darkgray;
+    display:inline-block;
+}
+
 #usuario{
     float: right;
     width: 35px;
@@ -16,6 +57,7 @@
     margin-top: 20px;
     margin-right: 10px;
 }
+
 
 h1 {
     text-align: center;
