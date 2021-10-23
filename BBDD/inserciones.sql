@@ -1,12 +1,12 @@
-INSERT INTO cliente (dni, nombre, telefono, direccion, correo, graduacion) VALUES
-( '74560661C', 'Cristiano Ronaldo',969000333, 'Avenida España, 16', 'cr7@comercio.es','' ),
-( '82257405R', 'Miguel Herran', 967214500,'Calle Boteros, 4', 'miguelhe@comercio.es', '2,5 dioptrías en ambos ojos de astigamtismo'),
-( '89275991L', 'Vinicius Ruescas', 653804053,'Calle Tejares, 5', 'vinijr@comercio.es', '5 dioptrías ojo izquierdo astigmatimso, 1,5 dioptrías en ojo derecho hipermetropía'),
-( '62550311V', 'Rafa Nadal',969433363, 'Avenida Puerto Indias, 23', 'rafanadal@comercio.e','' ),
-( '28611552N', 'Rosario Flores',612458787, 'Calle Villar Encina, 62', 'rosaflowers@comercio', '1,5 ambos ojos astigmatismo'),
-( '90414531J', 'Ester Exposito', 666841377,'Avenida Concepción, 12', 'estero@comercio.es', '0,25 astigmatismo ambos ojos'),
-( '03203593S', 'David Bisbal', 601522533,'Calle Cuenca, 45', 'bisbi@comercio.es', ''),
-( '14635054Q', 'Luuk de Jong', 911885400, 'Calle Pizarro, 33', 'luuk@comercio.es','' );
+INSERT INTO cliente (dni, nombre, telefono, direccion, correo, nacimiento, graduacion, contrasena) VALUES
+( '74560661C', 'Cristiano Ronaldo',969000333, 'Avenida España, 16', 'cr7@comercio.es','1986/05/03','','cr7' ),
+( '82257405R', 'Miguel Herran', 967214500,'Calle Boteros, 4', 'miguelhe@comercio.es', '1996/06/30','2,5 dioptrías en ambos ojos de astigamtismo','miguel'),
+( '89275991L', 'Vinicius Ruescas', 653804053,'Calle Tejares, 5', 'vinijr@comercio.es','2010/04/15', '5 dioptrías ojo izquierdo astigmatimso, 1,5 dioptrías en ojo derecho hipermetropía','vini'),
+( '62550311V', 'Rafa Nadal',969433363, 'Avenida Puerto Indias, 23', 'rafanadal@comercio.es','1994/12/25','','rafa'),
+( '28611552N', 'Rosario Flores',612458787, 'Calle Villar Encina, 62', 'rosaflowers@comercio.es','1983/02/14', '1,5 ambos ojos astigmatismo','rosa'),
+( '90414531J', 'Ester Exposito', 666841377,'Avenida Concepción, 12', 'estero@comercio.es', '2000/08/17','0,25 astigmatismo ambos ojos','ester'),
+( '03203593S', 'David Bisbal', 601522533,'Calle Cuenca, 45', 'bisbi@comercio.es', '1999/05/22','','bisbal'),
+( '14635054Q', 'Luuk de Jong', 911885400, 'Calle Pizarro, 33', 'luuk@comercio.es','1975/08/24','','luk' );
 
 INSERT INTO compra (IDCompra, fechaCompra, precio, direccionEnvio, fechaPago, dniCliente) VALUES 
 (1,'2021/03/21','210','Avenida de España 43, Albacete','2021/03/22','49256124Y'),
@@ -41,3 +41,6 @@ INSERT INTO suministra VALUES
 
 INSERT INTO contiene VALUES 
 (1,1), (2,3), (3,1), (4,3), (5,2);
+
+INSERT INTO cita VALUES
+('1',"2021/10/23",'74560661C'),('2', "2021/10/25",'03203593S'), ('3',"2021/11/02",'62550311V'),('4',"2021/12/25",'74560661C');

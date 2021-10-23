@@ -38,7 +38,9 @@ CREATE TABLE IF NOT EXISTS cliente (
   nombre varchar(60) NOT NULL,
   telefono integer NOT NULL UNIQUE,
   direccion varchar (100) NOT NULL,
-  correo varchar(25) NOT NULL,
+  correo varchar(25) NOT NULL UNIQUE,
+  contrasena varchar(25) NOT NULL,
+  nacimiento date NOT NULL,
   graduacion varchar (100) DEFAULT NULL
     );
 
@@ -65,3 +67,8 @@ CREATE TABLE IF NOT EXISTS contiene(
     codA char(3) NOT NULL REFERENCES almacen (codA) ON DELETE CASCADE ON UPDATE CASCADE,
     primary key (IDArt,codA)
     );
+CREATE TABLE IF NOT EXISTS cita(
+  IDCita integer (15) primary key,
+  fecha date NOT NULL,
+  dniCliente char(9) REFERENCES cliente(dni) ON UPDATE CASCADE
+);
