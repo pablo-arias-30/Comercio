@@ -212,6 +212,12 @@ ul, li {
     margin-right: 5%;
 }
 
+#fondo3 {
+    background-image: url("../Recursos/5fbb955944683.jpeg");
+    margin-left: 25%;
+    margin-right: 13%;
+}
+
 .dentro ul {
     margin: 7px;
     padding-left: 20px;
