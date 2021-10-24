@@ -4,7 +4,7 @@
 <head>
     <meta charset=utf-8 />
     <link rel="stylesheet" href="stile.css" type="text/css">
-    <title>Catalogo Gafas de Sol</title>
+    <title>Pedir cita</title>
 </head>
 
 <body>
@@ -32,6 +32,20 @@
         <li> <a href="pedirCita.html">PEDIR CITA</a></li>
 
     </ul>
+
+    <div id="fondo3">
+        <section class="form-registro">
+            <h3>Nueva cita en VISUALVISION</h3>
+
+            <form method="POST" action="../Servidor/cita.php">
+                ID de la cita:<br><br>
+                <input class="controls" type="text" name="IDCita" placeholder="Id de la cita"><br><br> Introduzca su DNI:<br><br>
+                <input class="controls" type="text" name="dniCliente" placeholder="DNI"><br><br> Introduzca su fecha:<br><br>
+                <input class="controls" type="date" name="fecha" placeholder="Fecha de la cita"><br><br> 
+                <input class="botones" type="submit" value="Tramitar Cita">
+            </form>
+        </section>
+    </div>
 
 </body>
 
