@@ -40,4 +40,7 @@ if ($_POST) {
     </script>';
     }
 }
-?>
+echo '<script type="text/javascript">
+    alert("Ha ocurrido algún error");
+    window.location.href="../Interfaz/iniciarSesion.html";
+    </script>';

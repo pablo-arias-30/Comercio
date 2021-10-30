@@ -36,14 +36,15 @@
     <div id="fondo3">
         <section class="form-registro">
             <h3>Nueva cita en VISUALVISION</h3>
-
-            <form method="POST" action="../Servidor/cita.php">
-                ID de la cita:<br><br>
-                <input class="controls" type="text" name="IDCita" placeholder="Id de la cita"><br><br> Introduzca su
-                DNI:<br><br>
+            <form action="../Servidor/cita.php" method="POST">
+                Introduzca su DNI:<br><br>
                 <input class="controls" type="text" name="dniCliente" placeholder="DNI"><br><br> Introduzca la
                 fecha:<br><br>
-                <input class="controls" type="date" name="fecha" placeholder="Fecha de la cita"><br><br>
+                <input class="controls" type="date" name="fechaCita" placeholder="Fecha de la cita"><br><br>
+                Introduzca la
+                hora: (Horario de 9:00 a 21:00)<br><br>
+                <input type="time" class="controls" name="hora" min="09:00" max="21:00"
+                    placeholder="Hora de la cita"><br><br>
                 <input class="botones" type="submit" value="Tramitar Cita">
             </form>
         </section>

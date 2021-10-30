@@ -70,5 +70,6 @@ CREATE TABLE IF NOT EXISTS contiene(
 CREATE TABLE IF NOT EXISTS cita(
   IDCita integer (15) primary key,
   fecha date NOT NULL,
+  hora time NOT NULL,
   dniCliente char(9) REFERENCES cliente(dni) ON UPDATE CASCADE
 );
