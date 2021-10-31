@@ -8,13 +8,17 @@
 </head>
 
 <body>
+    <?php if (!isset($_COOKIE["usuario"])) { //Aún no se ha iniciado sesión
+    header("Location: ../Interfaz/iniciarSesion.html");
+}
+
+?>
 
     <a href="index.html"><img id="img1" src="../Recursos/VISUALVISION.png"></a>
     <a href="compra.html"><img id="compra" src="../Recursos/carrito.png"></a>
-    <a href="miperfil.html"><img id="usuario" src="../Recursos/usuario.png"></a>
+    <a href="miperfil.php"><img id="usuario" src="../Recursos/usuario.png"></a>
 
-
-    <h2 id="nombrePerfil">Bienvenida, Verónica</h2>
+    <h2 id="nombrePerfil">Hola, <?php echo $_COOKIE["usuario"] ?></h2>
     <div class="perfil">
 
         <div class="dentro">
@@ -66,7 +70,7 @@
                 <li><a href="catalogo-otros.html">Otros</a></li>
             </ul>
         </li>
-        <li><a href="miperfil.html">MI CUENTA</a>
+        <li><a href="miperfil.php">MI CUENTA</a>
             <ul>
                 <li><a href="iniciarSesion.html">Iniciar sesión</a></li>
                 <li><a href="registro.html">Nuevo usuario</a></li>

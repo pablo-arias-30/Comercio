@@ -3,8 +3,10 @@
 function procesaResultado($resultado)
 {
     while ($registro = $resultado->fetch_assoc()) {
-        if (!empty($registro["dni"])) { //Se ha encontrado a esa persona
-            header("Location: ../Interfaz/miperfil.html");
+        if (!empty($registro["nombre"])) { //Se ha encontrado a esa persona
+            $nombre = $registro["nombre"];
+            setcookie("usuario", "$nombre", time() + 3600, "/");
+            header("Location: ../Interfaz/miperfil.php");
         }
     }
     echo '<script type="text/javascript">
@@ -21,7 +23,7 @@ if ($_POST) {
         //SACAR DNI DEL CLIENTE PARA SABER QUIEN ES Y YA BUSCAR SU CONTRASEÑA
 
 //Conexion a BBDD
-        $consulta = "SELECT dni FROM cliente WHERE correo = '$email'  &&  contrasena = '$contrasena'";
+        $consulta = "SELECT nombre FROM cliente WHERE correo = '$email'  &&  contrasena = '$contrasena'";
         $conexion = new mysqli('localhost', 'root', '', 'proyecto comercio');
         $conexion->set_charset('utf8');
 //establece el conjunto de caracteres en la conexión, para que no haya problema de acentos y ñ de los campos
@@ -44,3 +46,4 @@ echo '<script type="text/javascript">
     alert("Ha ocurrido algún error");
     window.location.href="../Interfaz/iniciarSesion.html";
     </script>';
+?>

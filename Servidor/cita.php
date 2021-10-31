@@ -9,7 +9,7 @@ function procesaResultado($consulta, $conexion)
             //inserción correcta
             echo '<script type="text/javascript">
     alert("Cita asignada correctamente");
-    window.location.href="../Interfaz/miperfil.html";
+    window.location.href="../Interfaz/miperfil.php";
     </script>';
         }
         echo '<script type="text/javascript">

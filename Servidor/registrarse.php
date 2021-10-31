@@ -1,10 +1,11 @@
 <?php
 
-function procesaResultado($resultado)
+function procesaResultado($resultado,$nombre)
 {
     if ($resultado) {
         //inserción correcta
-        header("Location: ../Interfaz/miperfil.html");
+        setcookie("usuario", "$nombre", time() + 3600, "/");
+        header("Location: ../Interfaz/miperfil.php");
     }
     echo '<script type="text/javascript">
     alert("Las credenciales introducidas son incorrectas. Es posible que el DNI o correo ya esté en uso. Vuelva a intentarlo porfavor");
@@ -36,7 +37,7 @@ if ($_POST) {
             $resultado = mysqli_query($conexion, $consulta);
             mysqli_close($conexion);
         }
-        procesaResultado($resultado);
+        procesaResultado($resultado,$nombre);
 
     } else {
         echo '<script type="text/javascript">
