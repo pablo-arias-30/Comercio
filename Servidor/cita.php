@@ -1,6 +1,7 @@
 <?php
 
 
+
 function procesaResultado($consulta, $conexion)
 {
         $resultado = mysqli_query($conexion, $consulta);
@@ -14,7 +15,7 @@ function procesaResultado($consulta, $conexion)
         }
         echo '<script type="text/javascript">
     alert("El DNI introducido es incorrecto");
-    window.location.href="../Interfaz/pedirCita.html";
+    window.location.href="../Interfaz/pedirCita.php";
     </script>';
 
 }
@@ -43,14 +44,14 @@ if ($_POST) {
 } else {
     echo '<script type="text/javascript">
     alert("Debes introducir todos los campos");
-    window.location.href="../Interfaz/pedirCita.html";
+    window.location.href="../Interfaz/pedirCita.php";
     </script>';
 }
 
 }
 echo '<script type="text/javascript">
     alert("Ha ocurrido algún error");
-    window.location.href="../Interfaz/pedirCita.html";
+    window.location.href="../Interfaz/pedirCita.php";
     </script>';
 
 ?>

@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 function procesaResultado($resultado)
 {
     while ($registro = $resultado->fetch_assoc()) {
@@ -14,11 +14,12 @@ function procesaResultado($resultado)
     window.location.href="../Interfaz/iniciarSesion.html";
     </script>';
 }
-
 if ($_POST) {
     if (!empty($_POST["email"]) && !empty($_POST["contraseña"])) {
         $email = $_POST["email"];
         $contrasena = $_POST["contraseña"];
+        setcookie("email", "$email", time() + 3600, "/");
+        setcookie( "contraseña", "$contrasena", time() + 3600, "/");
 
         //SACAR DNI DEL CLIENTE PARA SABER QUIEN ES Y YA BUSCAR SU CONTRASEÑA
 
@@ -41,7 +42,7 @@ if ($_POST) {
     window.location.href="../Interfaz/iniciarSesion.html";
     </script>';
     }
-}
+} 
 echo '<script type="text/javascript">
     alert("Ha ocurrido algún error");
     window.location.href="../Interfaz/iniciarSesion.html";
