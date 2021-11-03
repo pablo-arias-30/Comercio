@@ -115,6 +115,8 @@ ul, li {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+
+
 .controls {
     width: 100%;
     background: white;
@@ -223,10 +225,11 @@ ul, li {
     padding-left: 20px;
 }
 
+
 .dentro li a {
     display: inline-block;
     text-decoration: none;
-    margin: 0.5px;
+    margin: 0.7px;
     color: black;
     font-family: sans-serif;
     font-size: 2em;

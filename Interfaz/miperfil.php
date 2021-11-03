@@ -10,7 +10,7 @@
 
 <body>
     <?php
-     if (!isset($_COOKIE["usuario"])) { //Aún no se ha iniciado sesión
+if (!isset($_COOKIE["usuario"])) { //Aún no se ha iniciado sesión
     header("Location: iniciarSesion.html");
 }
 
@@ -28,7 +28,7 @@
             <ul>
                 <li><img src="../Recursos/pedidos.png" width="50px" height="50px"><a href="">Mis pedidos</a>
                 </li>
-                <li><img src="../Recursos/pedidos.png" width="50px" height="50px"><a href="mostrarCitas.php">Mis citas</a></li>
+                <li><img src="../Recursos/reloj.png" width="50px" height="50px"><a href="mostrarCitas.php">Mis citas</a></li>
             </ul>
             <br><br>
             <br>

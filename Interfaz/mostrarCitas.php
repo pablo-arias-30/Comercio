@@ -1,35 +1,36 @@
 <?php session_start();
-function guardarCita($conexion, $email, $contrasena){
-    $consultaCliente="SELECT dni FROM cliente WHERE correo = '$email'  &&  contrasena = '$contrasena'";
+function guardarCita($conexion, $email, $contrasena)
+{
+    $consultaCliente = "SELECT dni FROM cliente WHERE correo = '$email'  &&  contrasena = '$contrasena'";
     $resultado1 = mysqli_query($conexion, $consultaCliente);
-    if($resultado1){
-    while ($registro = $resultado1->fetch_assoc()) {
-        if (!empty($registro["dni"])) { //Se ha encontrado a esa persona
-            $dni = $registro["dni"];
+    if ($resultado1) {
+        while ($registro = $resultado1->fetch_assoc()) {
+            if (!empty($registro["dni"])) { //Se ha encontrado a esa persona
+                $dni = $registro["dni"];
+            }
         }
-    }
-    $cita= "SELECT fecha, hora FROM cita WHERE dniCliente='$dni'";
-    $resultado2 = mysqli_query($conexion, $cita); 
-    if ($resultado2){
-        $registro=array();
-        $fecha=array();
-        $hora=array();
-       $i=0;
-        while ($registro = $resultado2->fetch_assoc()) {
-            if (!empty($registro["fecha"])&&!empty($registro["hora"])) { //Se ha encontrado a esa persona
-              //for($i=0; $i<sizeof($registro);$i++){
-                $fecha[$i] = $registro["fecha"]."\n";
-                $hora[$i]  = $registro["hora"]."\n";
-            $i++;
-        }
-        }
-        $_SESSION ["fechaCita"]=array();
-        $_SESSION ["horaCita"]=array();
+        $cita = "SELECT fecha, hora FROM cita WHERE dniCliente='$dni'";
+        $resultado2 = mysqli_query($conexion, $cita);
+        if ($resultado2) {
+            $registro = array();
+            $fecha = array();
+            $hora = array();
+            $i = 0;
+            while ($registro = $resultado2->fetch_assoc()) {
+                if (!empty($registro["fecha"]) && !empty($registro["hora"])) { //Se ha encontrado a esa persona
+                    //for($i=0; $i<sizeof($registro);$i++){
+                    $fecha[$i] = $registro["fecha"] . "\n";
+                    $hora[$i] = $registro["hora"] . "\n";
+                    $i++;
+                }
+            }
+            $_SESSION["fechaCita"] = array();
+            $_SESSION["horaCita"] = array();
 
-        $_SESSION ["fechaCita"]=$fecha;
-        $_SESSION ["horaCita"]=$hora;
+            $_SESSION["fechaCita"] = $fecha;
+            $_SESSION["horaCita"] = $hora;
 
-    }
+        }
     }
 }
 //Conexion a BBDD
@@ -39,9 +40,9 @@ $conexion->set_charset('utf8');
 if ($conexion->connect_error) {
     die('Error en la conexion' . $connect_error);
 } else {
-    $email=$_COOKIE["email"] ;
-    $contrasena=$_COOKIE["contraseña"] ;
-    guardarCita($conexion,$email,$contrasena);
+    $email = $_COOKIE["email"];
+    $contrasena = $_COOKIE["contraseña"];
+    guardarCita($conexion, $email, $contrasena);
     mysqli_close($conexion);
 }?>
 <!DOCTYPE html>
@@ -60,20 +61,28 @@ if ($conexion->connect_error) {
     <a href="miperfil.php"><img id="usuario" src="../Recursos/usuario.png"></a>
 
     <h2 id="nombrePerfil">Hola, <?php echo $_COOKIE["usuario"] ?></h2>
-    
+
     <div class="perfil">
 
         <div class="dentro">
             <ul>
                 <li><img src="../Recursos/pedidos.png" width="50px" height="50px"><a href="">Mis pedidos</a>
                 </li>
-                <li><img src="../Recursos/pedidos.png" width="50px" height="50px"><a href="mostrarCitas.php">Mis citas</a><br><br>
-                <?php 
-    echo implode($_SESSION["fechaCita"]); //Implode pasa array a String
-    echo "\n";
-    ?>
+                <li><img src="../Recursos/reloj.png" width="50px" height="50px"><a href="mostrarCitas.php">Mis citas</a><br><br>
+                </li>
+                <?php
+$citas = array();
+$horas = array();
+$citas = $_SESSION['fechaCita'];
+$horas = $_SESSION['horaCita'];
+
+for ($i = 0; $i < sizeof($citas); $i++) {
+    echo "<h3>Día: $citas[$i]" . ' a las ' . "$horas[$i]</h3>" . '<br>';
+}
+?><br>
+        </div>
     <br>
-    <?php echo implode($_SESSION["horaCita"])?></li>
+
             </ul>
             <br><br>
             <br>
@@ -106,7 +115,7 @@ if ($conexion->connect_error) {
             <br>
             <br>
             <br>
-        </div>
+
     </div>
 
 
