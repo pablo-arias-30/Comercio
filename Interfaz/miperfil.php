@@ -4,7 +4,7 @@
 
 <head>
     <meta charset=utf-8 />
-    <link rel="stylesheet" href="stile.css" type="text/css">
+    <link rel="stylesheet" href="./stile.css" type="text/css">
     <title>Mi perfil</title>
 </head>
 
@@ -19,6 +19,7 @@ if (!isset($_COOKIE["usuario"])) { //Aún no se ha iniciado sesión
     <a href="index.html"><img id="img1" src="../Recursos/VISUALVISION.png"></a>
     <a href="compra.html"><img id="compra" src="../Recursos/carrito.png"></a>
     <a href="miperfil.php"><img id="usuario" src="../Recursos/usuario.png"></a>
+    <a href="cerrarSesion.php"><img id="cerrarSesion" src= "../Recursos/cerrarSesion.png"></a>
 
     <h2 id="nombrePerfil">Hola, <?php echo $_COOKIE["usuario"] ?></h2>
 

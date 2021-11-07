@@ -59,6 +59,13 @@
     height: 35px;
     margin-top: 20px;
     margin-right: 10px;
+} 
+#cerrarSesion {
+    float: right;
+    width: 35px;
+    height: 35px;
+    margin-top: 20px;
+    margin-right: 20px;
 }
 
 h1 {
