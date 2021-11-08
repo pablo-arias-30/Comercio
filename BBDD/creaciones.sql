@@ -5,9 +5,11 @@ CREATE TABLE articulo (
   tipo varchar(25) DEFAULT NULL CHECK ( tipo IN ( 'Gafas de sol', 'Gafas de cerca', 'Gafas de lejos','Gafas progresivas', 'lentillas')),
   precio float(7,2) NOT NULL,
   color varchar(15) DEFAULT NULL,
+  logo varchar (150),
+  imagen varchar (150), 
   codA integer(10) NOT NULL REFERENCES almacen(codA) ON UPDATE CASCADE,
   codP integer (20) NOT NULL REFERENCES proveedor(codP) ON UPDATE CASCADE,
-  IDCompra integer (15) NOT NULL REFERENCES compra (IDCompra) ON UPDATE CASCADE
+  IDCompra integer (15) REFERENCES compra (IDCompra) ON UPDATE CASCADE
 );
 
 

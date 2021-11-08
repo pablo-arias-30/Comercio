@@ -17,8 +17,7 @@ function guardarCita($conexion, $email, $contrasena)
             $hora = array();
             $i = 0;
             while ($registro = $resultado2->fetch_assoc()) {
-                if (!empty($registro["fecha"]) && !empty($registro["hora"])) { //Se ha encontrado a esa persona
-                    //for($i=0; $i<sizeof($registro);$i++){
+                if (!empty($registro["fecha"]) && !empty($registro["hora"])) { //Vamos guardando las citas
                     $fecha[$i] = $registro["fecha"] . "\n";
                     $hora[$i] = $registro["hora"] . "\n";
                     $i++;
@@ -26,7 +25,7 @@ function guardarCita($conexion, $email, $contrasena)
             }
             $_SESSION["fechaCita"] = array();
             $_SESSION["horaCita"] = array();
-
+            //Guardamos las citas en la sesion
             $_SESSION["fechaCita"] = $fecha;
             $_SESSION["horaCita"] = $hora;
 
@@ -59,6 +58,8 @@ if ($conexion->connect_error) {
     <a href="index.html"><img id="img1" src="../Recursos/VISUALVISION.png"></a>
     <a href="compra.html"><img id="compra" src="../Recursos/carrito.png"></a>
     <a href="miperfil.php"><img id="usuario" src="../Recursos/usuario.png"></a>
+    <a href="cerrarSesion.php"><img id="cerrarSesion" src= "../Recursos/cerrarSesion.png"></a>
+
 
     <h2 id="nombrePerfil">Hola, <?php echo $_COOKIE["usuario"] ?></h2>
 
@@ -123,8 +124,8 @@ for ($i = 0; $i < sizeof($citas); $i++) {
         <li><a href="index.html">PÁGINA PRINCIPAL</a></li>
         <li><a href="">CATÁLOGO</a>
             <ul>
-                <li><a href="catalogo-gafasDeSol.html">Gafas de sol</a></li>
-                <li><a href="catalogo-gafasDeVista.html">Gafas de vista</a></li>
+                <li><a href="catalogo-gafasDeSol.php">Gafas de sol</a></li>
+                <li><a href="catalogo-gafasDeVista.php">Gafas de vista</a></li>
                 <li><a href="catalogo-otros.html">Otros</a></li>
             </ul>
         </li>

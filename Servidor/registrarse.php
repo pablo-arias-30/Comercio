@@ -1,10 +1,15 @@
 <?php
 
-function procesaResultado($resultado,$nombre)
+function procesaResultado($resultado,$nombre,$dni,$contrasena,$email)
 {
     if ($resultado) {
         //inserción correcta
         setcookie("usuario", "$nombre", time() + 3600, "/");
+        setcookie("dni", "$dni", time() + 3600, "/");
+        setcookie("contraseña", "$contrasena", time() + 3600, "/");
+        setcookie("email", "$email", time() + 3600, "/");
+
+
         header("Location: ../Interfaz/miperfil.php");
     }
     echo '<script type="text/javascript">
@@ -37,7 +42,7 @@ if ($_POST) {
             $resultado = mysqli_query($conexion, $consulta);
             mysqli_close($conexion);
         }
-        procesaResultado($resultado,$nombre);
+        procesaResultado($resultado,$nombre,$dni,$contrasena,$email);
 
     } else {
         echo '<script type="text/javascript">

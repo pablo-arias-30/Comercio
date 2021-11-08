@@ -22,13 +22,15 @@ INSERT INTO proveedor VALUES
  INSERT INTO almacen VALUES 
 (1,'Madrid',3000),(2,'Valencia',2300),(3,'Albacete',2500);
 
-INSERT INTO articulo (IDArt, nombre, marca, tipo, precio, color, codA, codP, IDCompra) VALUES
-(1, 'Gafas de sol graduadas deluxe Tommy Hilfiger', 'Tommy Hilfiger', 'Gafas de sol', '120','Negro','1','1' ,'1'),
-(2, 'Gafas de sol Polaroid', 'Polaroid', 'Gafas de sol', '50','Gris','1','2', '2'),
-(3, 'Gafas de sol Carrera', 'Carrera', 'Gafas de sol', '60','Negro','1','2', '3'),
-(4, 'Gafas progresivas Carolina Herrera','Carolina Herrera', 'Gafas progresivas', '187.50','Rosa', '2', '1', '4'),
-(5, 'Gafas de cerca Ray-Ban', 'Ray-Ban', 'Gafas de cerca', '180', 'Rojo','3', '3','4'),
-(6, 'Gafas progresivas Lacoste', 'Lacoste', 'Gafas progresivas', '90','Dorado', '3', '2','1');
+INSERT INTO articulo (IDArt, nombre, marca, tipo, precio, color, codA, codP, IDCompra,logo,imagen) VALUES
+(1, 'Gafas de sol graduadas deluxe Tommy Hilfiger', 'Tommy Hilfiger', 'Gafas de sol', '120','Negro','1','1' ,'1','Tommy-Hilfiger-logo.png','gafasDeSol1.png'),
+(2, 'Gafas de sol Polaroid', 'Polaroid', 'Gafas de sol', '50','Gris','1','2', '2','logo-polaroid.png','gafas2.png'),
+(3, 'Gafas de sol Carrera', 'Carrera', 'Gafas de sol', '60','Negro','1','2', '3','logo-carrera.png','gafas3.png'),
+(4, 'Gafas de sol Tommy Hilfiger premium', 'Tommy Hilfiger', 'Gafas de sol', '200','Negro','1','1' ,'','Tommy-Hilfiger-logo.png','gafas4.jpg'),
+(7, 'Gafas progresivas Carolina Herrera','Carolina Herrera', 'Gafas progresivas', '187.50','Azul', '2', '1', '','carolina.png','gafas9.png'),
+(6, 'Gafas de cerca Ray-Ban', 'Ray-Ban', 'Gafas de cerca', '180', 'Dorado','3', '3','4','RAYBAN_LOGO.png','gafas6.png'),
+(8, 'Gafas graduadas Carolina Herrera','Carolina Herrera', 'Gafas progresivas', '215.90','Rosa', '2', '1', '','carolina.png','gafas8.png'),
+(9, 'Gafas progresivas Lacoste', 'Lacoste', 'Gafas progresivas', '90','Negro', '3', '2','1','Lacoste-Logo.png','gafas7.png');
 
 INSERT INTO suministra VALUES
  (1,2),(1,3),(3,5),(2,4),(4,1);

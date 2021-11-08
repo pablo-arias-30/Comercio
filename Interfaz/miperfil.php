@@ -70,8 +70,8 @@ if (!isset($_COOKIE["usuario"])) { //Aún no se ha iniciado sesión
         <li><a href="index.html">PÁGINA PRINCIPAL</a></li>
         <li><a href="">CATÁLOGO</a>
             <ul>
-                <li><a href="catalogo-gafasDeSol.html">Gafas de sol</a></li>
-                <li><a href="catalogo-gafasDeVista.html">Gafas de vista</a></li>
+                <li><a href="catalogo-gafasDeSol.php">Gafas de sol</a></li>
+                <li><a href="catalogo-gafasDeVista.php">Gafas de vista</a></li>
                 <li><a href="catalogo-otros.html">Otros</a></li>
             </ul>
         </li>

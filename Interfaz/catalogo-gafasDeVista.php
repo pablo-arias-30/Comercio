@@ -1,10 +1,24 @@
-<!DOCTYPE html>
+
+<?php 
+//Conexion a BBDD
+    $consulta = "SELECT * FROM articulo WHERE tipo ='Gafas de cerca' || tipo = 'Gafas progresivas'";
+    $conexion = new mysqli('localhost', 'root', '', 'proyecto comercio');
+    $conexion->set_charset('utf8');
+//establece el conjunto de caracteres en la conexión, para que no haya problema de acentos y ñ de los campos
+    if ($conexion->connect_error) {
+        die('Error en la conexion' . $connect_error);
+    } else {
+        $resultado = mysqli_query($conexion, $consulta);
+        mysqli_close($conexion);
+    }
+
+?><!DOCTYPE html>
 <html>
 
 <head>
     <meta charset=utf-8 />
     <link rel="stylesheet" href="stile.css" type="text/css">
-    <title>Catalogo Otros</title>
+    <title>Catalogo Gafas de Vista</title>
 </head>
 
 <body>
@@ -13,6 +27,7 @@
     <a href="compra.html"><img id="compra" src="../Recursos/carrito.png"></a>
     <a href="miperfil.php"><img id="usuario" src="../Recursos/usuario.png"></a>
     <br>
+
     <ul class="Menu">
         <li><a href="index.html">PÁGINA PRINCIPAL</a></li>
         <li><a href="">CATÁLOGO</a>
@@ -31,20 +46,20 @@
         <li> <a href="pedirCita.php">PEDIR CITA</a></li>
 
     </ul>
-
+    <?php 
+ while ($registro = $resultado->fetch_assoc()) {
+    ?>
     <div id="gafas">
-        <img id="g1" src="../Recursos/fotoLentillas.jpg">
-        <img id='marca' src="../Recursos/biofinity-logo.png">
-        <p id="p1">Lentillas 009</p>
-        <p id="p1">18,00€</p>
+    <a href="#">
+        <img id="g1" src="../Recursos/<?php echo $registro['imagen']?>">
+        <img id='marca' src="../Recursos/<?php echo $registro['logo']?>">
+        <p id="p1"><?php echo $registro['nombre']?></p>
+        <p id="p1"><?php echo $registro['precio']?> €</p>
+ </a>
     </div>
-    <div id="gafas2">
-        <img id="g1" src="../Recursos/liquido.png">
-        <img id='marca' src="../Recursos/biofinity-logo.png">
-        <p id="p1">Líquido 350ml 010</p>
-        <p id="p1">5,00€</p>
-    </div>
-
+    <?php 
+ }
+ ?>
 
 </body>
 
