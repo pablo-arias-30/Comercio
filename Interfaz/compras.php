@@ -4,7 +4,8 @@
 <head>
     <meta charset=utf-8 />
     <link rel="stylesheet" href="stile.css" type="text/css">
-    <title>Página principal</title><script src="model.js"></script>
+    <title>Resumen de compra</title>
+    <script src="model.js"></script>
     <script src="agregar-articulo-presenter.js"></script>
     <script>
          let presenter;
@@ -20,6 +21,7 @@
 </head>
 
 <body onload="inicio()">
+
     <a href="index.html"><img id="img1" src="../Recursos/VISUALVISION.png"></a>
     <a href="compras.php"><img id="compra" src="../Recursos/carrito.png"></a>
     <label id="cesta" width=2px height=2px>0</label>

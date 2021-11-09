@@ -34,6 +34,18 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+#p2 {
+    text-align: center;
+    width: 220px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#id {
+    text-align: center;
+    width: 220px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 #usuario {
     float: right;
     width: 35px;
@@ -56,19 +68,6 @@
     height: 35px;
     margin-top: 20px;
     margin-right: 20px;
-}
-
-h1 {
-    text-align: center;
-    font-family: 'Dancing Script', cursive;
-}
-
-h1::before {
-    left: -220px;
-}
-
-h1::after {
-    right: -220px;
 }
 
 .texto {
@@ -142,6 +141,12 @@ ul, li {
     color: white;
     margin: 16px 0;
     font-size: 16px;
+}
+
+.form-registro .botones:hover {
+    color: white;
+    text-decoration: underline;
+    background: #1244C2;
 }
 
 .Menu {
@@ -233,4 +238,33 @@ ul, li {
 #gafas a {
     color: black;
     text-decoration: none;
+}
+
+#gafas:hover {
+    background-color: lightblue;
+}
+
+#cesta {
+    margin-top: 3px;
+    float: right;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+#añadir {
+    width: 100%;
+    background: blue;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+}
+
+#añadir:hover {
+    color: white;
+    text-decoration: underline;
+    background: #1244C2;
+
 }

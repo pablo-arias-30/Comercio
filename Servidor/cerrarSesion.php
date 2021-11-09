@@ -8,5 +8,5 @@ unset($_COOKIE["contrasena"]);
 setcookie("contrasena", "", time() - 3600, '/');
 echo '<script type="text/javascript">
     alert("Sesión cerrada correctamente");
-    window.location.href="index.html";
+    window.location.href="../Interfaz/index.html";
     </script>';

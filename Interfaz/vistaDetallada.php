@@ -1,24 +1,11 @@
-
-<?php 
-//Conexion a BBDD
-    $consulta = "SELECT * FROM articulo WHERE tipo ='Gafas de cerca' || tipo = 'Gafas progresivas'";
-    $conexion = new mysqli('localhost', 'root', '', 'proyecto comercio');
-    $conexion->set_charset('utf8');
-//establece el conjunto de caracteres en la conexión, para que no haya problema de acentos y ñ de los campos
-    if ($conexion->connect_error) {
-        die('Error en la conexion' . $connect_error);
-    } else {
-        $resultado = mysqli_query($conexion, $consulta);
-        mysqli_close($conexion);
-    }
-
-?><!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 <head>
     <meta charset=utf-8 />
     <link rel="stylesheet" href="stile.css" type="text/css">
-    <title>Catalogo Gafas de Vista</title> <script src="model.js"></script>
+    <title>Catalogo Gafas de Sol</title>
+    <script src="model.js"></script>
         <script src="agregar-articulo-presenter.js"></script>
         <script>
              let presenter;
@@ -34,13 +21,20 @@
 </head>
 
 <body onload="inicio()">
+<?php
+$id = $_GET['id'];
+$nombre = $_GET['nombre'];
+$precio = $_GET['precio'];
+$imagen = $_GET['imagen'];
+$logo = $_GET['logo'];
+$color = $_GET['color'];
 
+?>
     <a href="index.html"><img id="img1" src="../Recursos/VISUALVISION.png"></a>
     <a href="compras.php"><img id="compra" src="../Recursos/carrito.png"></a>
     <label id="cesta" width=2px height=2px>0</label>
     <a href="miperfil.php"><img id="usuario" src="../Recursos/usuario.png"></a>
     <br>
-
     <ul class="Menu">
         <li><a href="index.html">PÁGINA PRINCIPAL</a></li>
         <li><a href="">CATÁLOGO</a>
@@ -59,20 +53,30 @@
         <li> <a href="pedirCita.php">PEDIR CITA</a></li>
 
     </ul>
-    <?php 
- while ($registro = $resultado->fetch_assoc()) {
-    ?>
+    <?php setcookie("imagen", "$imagen", time() + 3600, "/");
+setcookie("logo", "$logo", time() + 3600, "/");
+setcookie("nombre", "$nombre", time() + 3600, "/");
+setcookie("color", "$color", time() + 3600, "/");
+setcookie("logo", "$logo", time() + 3600, "/");
+setcookie("id", "$id", time() + 3600, "/");
+setcookie("precio", "$precio", time() + 3600, "/");?>
+
     <div id="gafas">
-    <a href="#">
-        <img id="g1" src="../Recursos/<?php echo $registro['imagen']?>">
-        <img id='marca' src="../Recursos/<?php echo $registro['logo']?>">
-        <p id="p1"><?php echo $registro['nombre']?></p>
-        <p id="p1"><?php echo $registro['precio']?> €</p>
- </a>
+    <h2 id="nombre"><?php echo $nombre ?></h2>
+        <img id="g1" src="../Recursos/<?php echo $imagen ?>">
+        <img id='marca' src="../Recursos/<?php echo $logo ?>">
+        <p id="p1"><?php echo $color ?></p>
+        <p id="p2"><?php echo $precio ?> €</p>
+        <p id ="id">ID de referencia: <?php echo $id ?></p>
+        <div id="enlace">
+    <nav>
+    <form method="POST">
+            <input id="añadir" type="submit" value="Añadir al carrito" onclick="presenter.guardarClick(event)">
+        </form>
+    </nav>
+
     </div>
-    <?php 
- }
- ?>
+
 
 </body>
 

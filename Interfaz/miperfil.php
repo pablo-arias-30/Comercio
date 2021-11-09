@@ -5,10 +5,22 @@
 <head>
     <meta charset=utf-8 />
     <link rel="stylesheet" href="./stile.css" type="text/css">
-    <title>Mi perfil</title>
+    <title>Mi perfil</title> <script src="model.js"></script>
+        <script src="agregar-articulo-presenter.js"></script>
+        <script>
+             let presenter;
+            function inicio() {
+           // presenter.init();
+           presenter = new AgregarArticuloPresenter(new ComprasApp(), document); //document porque el id esta dentro y solo nos interesa el id de la tarea para mostrar el mensaje de que se ha borrado
+                console.log(presenter.model);
+                presenter.refresh();
+
+            }
+        </script>
+
 </head>
 
-<body>
+<body onload="inicio()">
     <?php
 if (!isset($_COOKIE["usuario"])) { //Aún no se ha iniciado sesión
     header("Location: iniciarSesion.html");
@@ -17,9 +29,10 @@ if (!isset($_COOKIE["usuario"])) { //Aún no se ha iniciado sesión
 ?>
 
     <a href="index.html"><img id="img1" src="../Recursos/VISUALVISION.png"></a>
-    <a href="compra.html"><img id="compra" src="../Recursos/carrito.png"></a>
+    <a href="compras.php"><img id="compra" src="../Recursos/carrito.png"></a>
+    <label id="cesta" width=2px height=2px>0</label>
     <a href="miperfil.php"><img id="usuario" src="../Recursos/usuario.png"></a>
-    <a href="cerrarSesion.php"><img id="cerrarSesion" src= "../Recursos/cerrarSesion.png"></a>
+    <a href="../Servidor/cerrarSesion.php"><img id="cerrarSesion" src= "../Recursos/cerrarSesion.png"></a>
 
     <h2 id="nombrePerfil">Hola, <?php echo $_COOKIE["usuario"] ?></h2>
 
