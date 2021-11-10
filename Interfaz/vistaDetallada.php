@@ -61,13 +61,13 @@ setcookie("logo", "$logo", time() + 3600, "/");
 setcookie("id", "$id", time() + 3600, "/");
 setcookie("precio", "$precio", time() + 3600, "/");?>
 
-    <div id="gafas">
+    <div id="gafasphp">
     <h2 id="nombre"><?php echo $nombre ?></h2>
-        <img id="g1" src="../Recursos/<?php echo $imagen ?>">
-        <img id='marca' src="../Recursos/<?php echo $logo ?>">
-        <p id="p1"><?php echo $color ?></p>
-        <p id="p2"><?php echo $precio ?> €</p>
-        <p id ="id">ID de referencia: <?php echo $id ?></p>
+        <img id="g1php" src="../Recursos/<?php echo $imagen ?>">
+        <img id='marcaphp' src="../Recursos/<?php echo $logo ?>">
+        <p id="p1php"><?php echo $color ?></p>
+        <p id="p2php"><?php echo $precio ?> €</p>
+        <p id ="idphp">ID de referencia: <?php echo $id ?></p>
         <div id="enlace">
     <nav>
     <form method="POST">
