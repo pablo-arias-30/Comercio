@@ -29,7 +29,7 @@ if (!isset($_COOKIE["usuario"])) { //Aún no se ha iniciado sesión
 ?>
 
     <a href="index.html"><img id="img1" src="../Recursos/VISUALVISION.png"></a>
-    <a href="compras.php"><img id="compra" src="../Recursos/carrito.png"></a>
+    <a href="carrito.php"><img id="compra" src="../Recursos/carrito.png"></a>
     <label id="cesta" width=2px height=2px>0</label>
     <a href="miperfil.php"><img id="usuario" src="../Recursos/usuario.png"></a>
     <a href="../Servidor/cerrarSesion.php"><img id="cerrarSesion" src= "../Recursos/cerrarSesion.png"></a>
