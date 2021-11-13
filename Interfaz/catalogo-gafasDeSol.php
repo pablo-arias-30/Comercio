@@ -35,7 +35,7 @@ if ($conexion->connect_error) {
 
 <body onload="inicio()">
 
-    <a href="index.html"><img id="img1" src="../Recursos/VISUALVISION.png"></a>
+    <a href="index.html"><img id="imimagen" src="../Recursos/VISUALVISION.png"></a>
     <a href="carrito.php"><img id="compra" src="../Recursos/carrito.png"></a>
     <label id="cesta" width=2px height=2px>0</label>
     <a href="miperfil.php"><img id="usuario" src="../Recursos/usuario.png"></a>
@@ -64,7 +64,7 @@ while ($registro = $resultado->fetch_assoc()) {
     <div id="gafas">
     <a href="vistaDetallada.php?id=<?php echo $registro['IDArt'] . '&imagen=' . $registro['imagen'] . '&logo=' . $registro['logo'] .
     '&nombre=' . $registro['nombre'] . '&precio=' . $registro['precio'] . '&color=' . $registro['color'] ?>">
-        <img id="g1" src="../Recursos/<?php echo $registro['imagen'] ?>">
+        <img id="imagen" src="../Recursos/<?php echo $registro['imagen'] ?>">
         <img id='marca' src="../Recursos/<?php echo $registro['logo'] ?>">
         <p id="p1"><?php echo $registro['nombre'] ?></p>
         <p id="p1"><?php echo $registro['precio'] ?> €</p>

@@ -16,6 +16,7 @@ class AgregarArticuloPresenter {
         let color = leerCookie("color");
         let articulo = this.model.agregarArticulo(id, nombre, imagen, logo, precio, color);
         console.log(articulo);
+        alert("¡Artículo añadido al carrito!")
         this.refresh();
         //document.location.href = "compras.php";
 

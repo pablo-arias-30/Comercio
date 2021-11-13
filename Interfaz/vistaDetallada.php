@@ -30,7 +30,7 @@ $logo = $_GET['logo'];
 $color = $_GET['color'];
 
 ?>
-    <a href="index.html"><img id="img1" src="../Recursos/VISUALVISION.png"></a>
+    <a href="index.html"><img id="imimagen" src="../Recursos/VISUALVISION.png"></a>
     <a href="carrito.php"><img id="compra" src="../Recursos/carrito.png"></a>
     <label id="cesta" width=2px height=2px>0</label>
     <a href="miperfil.php"><img id="usuario" src="../Recursos/usuario.png"></a>
@@ -63,10 +63,10 @@ setcookie("precio", "$precio", time() + 3600, "/");?>
 
     <div id="gafasphp">
     <h2 id="nombre"><?php echo $nombre ?></h2>
-        <img id="g1php" src="../Recursos/<?php echo $imagen ?>">
+        <img id="imagenphp" src="../Recursos/<?php echo $imagen ?>">
         <img id='marcaphp' src="../Recursos/<?php echo $logo ?>">
-        <p id="p1php"><?php echo $color ?></p>
-        <p id="p2php"><?php echo $precio ?> €</p>
+        <p id="colorphp">Color: <?php echo $color ?></p>
+        <p id="preciophp"><?php echo $precio ?> €</p>
         <p id ="idphp">ID de referencia: <?php echo $id ?></p>
         <div id="enlace">
     <nav>

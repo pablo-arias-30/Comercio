@@ -1,4 +1,4 @@
-#img1 {
+#imimagen {
     margin-left: 1.5%;
     clear: both;
 }
@@ -39,7 +39,7 @@
 #marcaphp {
     height: 50px;
     width: 100px;
-    margin-left: 19%;
+    margin-left: 15%;
     display: inline-block;
 }
 
@@ -53,16 +53,20 @@
     float: right;
 }
 
-#g1 {
+#imagen {
     height: 200px;
     width: 200px;
 }
+#imagenCarrito {
+    height: 100px;
+    width: 100px;
+}
 
-#g1php {
+#imagenphp {
     margin-top: 0%;
     margin-left: 1%;
-    height: 450px;
-    width: 450px;
+    height: 400px;
+    width: 400px;
 }
 
 #p1 {
@@ -83,17 +87,7 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-#p1php {
-    margin-top: -35%;
-    margin-right: 15%;
-    text-align: center;
-    width: 220px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    display: inline-block;
-    float: right;
-}
-
-#p2php {
+#colorphp {
     margin-top: -30%;
     margin-right: 15%;
     text-align: center;
@@ -103,8 +97,19 @@
     float: right;
 }
 
-#idphp {
+#preciophp {
     margin-top: -25%;
+    margin-right: 15%;
+    text-align: center;
+    font-weight: bolder;
+    width: 220px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: inline-block;
+    float: right;
+}
+
+#idphp {
+    margin-top: -19%;
     margin-right: 15%;
     text-align: center;
     width: 220px;
@@ -114,7 +119,7 @@
 }
 
 #enlace {
-    margin-top: 0%;
+    margin-top: -10%;
     margin-right: 7%;
     width: 400px;
     float: right;
@@ -340,5 +345,4 @@ ul, li {
     color: white;
     text-decoration: underline;
     background: #1244C2;
-
 }
