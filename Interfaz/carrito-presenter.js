@@ -17,6 +17,9 @@ class CarritoPresenter {
         } else {
             let bloqueGrande = document.getElementById('bloqueGrande');
             let suma = 0;
+            let h2 = document.createElement('h2');
+            h2.innerHTML = '<h2>Resumen de tu cesta</h2>';
+            bloqueGrande.appendChild(h2);
             for (let articulo of this.model.compras) {
                 suma += articulo._precio * articulo._cantidad; //Precio total de la compra
                 console.log(articulo);
@@ -31,9 +34,10 @@ class CarritoPresenter {
                 bloqueGrande.appendChild(bloquePequeño);
 
             } //Muestro precio total
+            let bloquePrecio = document.getElementById('bloqueGrande');
             let precioTotal = document.createElement('h3');
-            precioTotal.innerHTML = "<h3 id='total'>Precio total     a pagar: " + suma + " €</h3>";
-            bloqueGrande.appendChild(precioTotal);
+            precioTotal.innerHTML = "<h3 id='total'>Precio total a pagar: " + suma + " €</h3>";
+            bloquePrecio.appendChild(precioTotal);
         }
     }
 }

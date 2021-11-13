@@ -12,6 +12,10 @@
 
     <script>
     function inicio() {
+        presenterVistaCarrito = new CarritoPresenter(new ComprasApp(),
+            document
+        ); //document porque el id esta dentro y solo nos interesa el id de la tarea para mostrar el mensaje de que se ha borrado
+        presenterVistaCarrito.refresh();
         presenterBorrarCarrito = new BorrarCestaPresenter(new ComprasApp(),
             document
         ); //document porque el id esta dentro y solo nos interesa el id de la tarea para mostrar el mensaje de que se ha borrado
@@ -19,10 +23,7 @@
             document
         ); //document porque el id esta dentro y solo nos interesa el id de la tarea para mostrar el mensaje de que se ha borrado
         presenterNumeroCarrito.refresh();
-        presenterVistaCarrito = new CarritoPresenter(new ComprasApp(),
-            document
-        ); //document porque el id esta dentro y solo nos interesa el id de la tarea para mostrar el mensaje de que se ha borrado
-        presenterVistaCarrito.refresh();
+
 
     }
     </script>
@@ -63,6 +64,7 @@
         </nav>
 
     </div>
+
     <div id="bloqueGrande">
     </div>
 
