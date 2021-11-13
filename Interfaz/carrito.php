@@ -6,20 +6,26 @@
     <link rel="stylesheet" href="stile.css" type="text/css">
     <title>Catalogo Gafas de Sol</title>
     <script src="model.js"></script>
-        <script src="carrito-presenter.js"></script>
-        <script src="agregar-articulo-presenter.js"></script>
-        <script src="borrar-cesta-presenter.js"></script>
+    <script src="carrito-presenter.js"></script>
+    <script src="agregar-articulo-presenter.js"></script>
+    <script src="borrar-cesta-presenter.js"></script>
 
-        <script>
-            function inicio() {
-                presenterBorrarCarrito = new BorrarCestaPresenter(new ComprasApp(), document); //document porque el id esta dentro y solo nos interesa el id de la tarea para mostrar el mensaje de que se ha borrado
-           presenterNumeroCarrito = new AgregarArticuloPresenter(new ComprasApp(), document); //document porque el id esta dentro y solo nos interesa el id de la tarea para mostrar el mensaje de que se ha borrado
-           presenterNumeroCarrito.refresh();
-           presenterVistaCarrito = new CarritoPresenter(new ComprasApp(), document); //document porque el id esta dentro y solo nos interesa el id de la tarea para mostrar el mensaje de que se ha borrado
-            presenterVistaCarrito.refresh();
+    <script>
+    function inicio() {
+        presenterBorrarCarrito = new BorrarCestaPresenter(new ComprasApp(),
+            document
+        ); //document porque el id esta dentro y solo nos interesa el id de la tarea para mostrar el mensaje de que se ha borrado
+        presenterNumeroCarrito = new AgregarArticuloPresenter(new ComprasApp(),
+            document
+        ); //document porque el id esta dentro y solo nos interesa el id de la tarea para mostrar el mensaje de que se ha borrado
+        presenterNumeroCarrito.refresh();
+        presenterVistaCarrito = new CarritoPresenter(new ComprasApp(),
+            document
+        ); //document porque el id esta dentro y solo nos interesa el id de la tarea para mostrar el mensaje de que se ha borrado
+        presenterVistaCarrito.refresh();
 
-            }
-        </script>
+    }
+    </script>
 
 </head>
 
@@ -49,22 +55,16 @@
 
     </ul>
     <div id="borrarCarrito" action="carrito.php">
-    <nav>
-    <form>
-            <input id="borrar" type="submit" value="Vaciar carrito" onclick="presenterBorrarCarrito.borrarCesta(event); ">
-        </form>
-    </nav>
+        <nav>
+            <form>
+                <input id="borrar" type="submit" value="Vaciar carrito"
+                    onclick="presenterBorrarCarrito.borrarCesta(); ">
+            </form>
+        </nav>
 
     </div>
-    <div id="gafas">
-    <div id="imagenCarrito">
-    <img id='marca'>
-    <p id="p2"></p>
-    <p id="p3"></p>
-    <p id="id"></p>
-
-
-
+    <div id="bloqueGrande">
+    </div>
 
 </body>
 

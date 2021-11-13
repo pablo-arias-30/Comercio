@@ -71,7 +71,9 @@ setcookie("precio", "$precio", time() + 3600, "/");?>
         <div id="enlace">
     <nav>
     <form method="POST">
-            <input id="añadir" type="submit" value="Añadir al carrito" onclick="presenter.guardarClick(event)">
+    <p id ="pCantidad">Seleccione cantidad:</p>
+    <input id="cantidad" type="number" name="cantidad" value=1 max=20 min=1>
+            <input id="añadir" type="submit" value="Añadir al carrito" onclick="presenter.guardarClick(event); setTimeout(function(){ alert('¡Artículo añadido al carrito!'); }, 200);">
         </form>
     </nav>
 

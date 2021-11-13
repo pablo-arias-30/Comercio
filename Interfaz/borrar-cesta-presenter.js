@@ -6,7 +6,7 @@ class BorrarCestaPresenter {
     }
 
 
-    borrarCesta(event) {
+    borrarCesta() {
         this.model.compras = [];
         this.refresh();
     }

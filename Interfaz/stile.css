@@ -1,7 +1,4 @@
-#imimagen {
-    margin-left: 1.5%;
-    clear: both;
-}
+
 
 #gafas {
     margin-top: 2%;
@@ -58,10 +55,6 @@
     width: 200px;
 }
 
-#imagenCarrito img {
-    height: 200px;
-    width: 200px;
-}
 
 #imagenphp {
     margin-top: 0%;
@@ -73,6 +66,7 @@
 #p1 {
     text-align: center;
     width: 220px;
+    color:black;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
@@ -348,6 +342,25 @@ ul, li {
     margin: 16px 0;
     font-size: 16px;
 }
+#pCantidad {
+    text-align: center;
+    width: 220px;
+    color:black;
+    margin-left:25%;
+    margin-top:0%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#cantidad {
+    width: 25%;
+    height: 50%;;
+    background:lightblue;
+    margin-left: 35%;
+    margin-bottom: 3%;;
+    border: none;
+    padding: 12px;
+    color: black;
+    font-size: 16px;
+}
 
 #añadir:hover {
     color: white;
@@ -370,3 +383,4 @@ ul, li {
     text-decoration: underline;
     background: #E42823;
 }
+

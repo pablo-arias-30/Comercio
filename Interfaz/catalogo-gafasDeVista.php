@@ -1,16 +1,16 @@
 
-<?php 
+<?php
 //Conexion a BBDD
-    $consulta = "SELECT * FROM articulo WHERE tipo ='Gafas de cerca' || tipo = 'Gafas progresivas'";
-    $conexion = new mysqli('localhost', 'root', '', 'proyecto comercio');
-    $conexion->set_charset('utf8');
+$consulta = "SELECT * FROM articulo WHERE tipo ='Gafas de cerca' || tipo = 'Gafas progresivas'";
+$conexion = new mysqli('localhost', 'root', '', 'proyecto comercio');
+$conexion->set_charset('utf8');
 //establece el conjunto de caracteres en la conexión, para que no haya problema de acentos y ñ de los campos
-    if ($conexion->connect_error) {
-        die('Error en la conexion' . $connect_error);
-    } else {
-        $resultado = mysqli_query($conexion, $consulta);
-        mysqli_close($conexion);
-    }
+if ($conexion->connect_error) {
+    die('Error en la conexion' . $connect_error);
+} else {
+    $resultado = mysqli_query($conexion, $consulta);
+    mysqli_close($conexion);
+}
 
 ?><!DOCTYPE html>
 <html>
@@ -59,21 +59,23 @@
         <li> <a href="pedirCita.php">PEDIR CITA</a></li>
 
     </ul>
-    <?php 
- while ($registro = $resultado->fetch_assoc()) {
+    <?php
+while ($registro = $resultado->fetch_assoc()) {
     ?>
-    <div id="gafas">
+
     <a href="vistaDetallada.php?id=<?php echo $registro['IDArt'] . '&imagen=' . $registro['imagen'] . '&logo=' . $registro['logo'] .
     '&nombre=' . $registro['nombre'] . '&precio=' . $registro['precio'] . '&color=' . $registro['color'] ?>">
-        <img id="imagen" src="../Recursos/<?php echo $registro['imagen']?>">
-        <img id='marca' src="../Recursos/<?php echo $registro['logo']?>">
-        <p id="p1"><?php echo $registro['nombre']?></p>
-        <p id="p1"><?php echo $registro['precio']?> €</p>
+    <div id="gafas">
+        <img id="imagen" src="../Recursos/<?php echo $registro['imagen'] ?>">
+        <img id='marca' src="../Recursos/<?php echo $registro['logo'] ?>">
+        <p id="p1"><?php echo $registro['nombre'] ?></p>
+        <p id="p1"><?php echo $registro['precio'] ?> €</p>
+        </div>
  </a>
-    </div>
-    <?php 
- }
- ?>
+
+    <?php
+}
+?>
 
 </body>
 

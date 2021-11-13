@@ -1,8 +1,8 @@
 class CarritoPresenter {
     constructor(model, view) {
         this.model = model;
-        this.view = view; // es igual al document
-        //        this.refresh();
+        this.view = view; 
+        // es igual al document
     }
 
 
@@ -10,29 +10,17 @@ class CarritoPresenter {
     refresh() {
         console.log(this.model);
         for (let articulo of this.model.compras) {
-
-            let bloque = document.getElementById('imagenCarrito');
-            let img = new Image();
-            img.src = '../Recursos/'+ articulo._imagen;
-            let logo = new Image();
-            logo.src = '../Recursos/'+ articulo._logo;
-            let nombre = document.createElement('p');
-            nombre.innerHTML = '<p id="p1"><'+articulo._nombre+'></p>';
-            let color = document.getElementById('p2');
-            color.innerHTML = articulo._color;
-            let precio = document.getElementById('p3');
-            precio.innerHTML = articulo._precio; 
-            let id = document.getElementById('id');
-            id.innerHTML = articulo._id; 
-            bloque.appendChild(img);
-            bloque.appendChild(logo);
-            bloque.appendChild(nombre);
-            bloque.appendChild(color);
-            bloque.appendChild(precio);
-            bloque.appendChild(id);
-
-
-            //document.location.href = "compras.php";*/
+            console.log(articulo);
+            let bloqueGrande = document.getElementById('bloqueGrande');
+            let bloquePequeño = document.createElement('div');
+            bloquePequeño.innerHTML = '<div id="gafas"><img id="imagen" src="../Recursos/'+articulo._imagen+'"></img>'
+            +'<img id="marca" src="../Recursos/'+articulo._logo+'"></img>'+
+            '<p id="p1"><strong>'+articulo._nombre.replace(/%20/g, " ")+'</strong></p><p id="p1">Color:'+articulo._color+'</p>'+
+            '<p id="p1"><strong>'+articulo._precio+' €</strong></p>'+
+            '<p id="p1">Cantidad seleccionada: '+articulo._cantidad+'</p>'+
+            '<p id="p1">ID de Referencia:'+articulo._id+'</p></div>';
+            //Añadimos precio, color, cantidad, imagen, etc. Replace nos permite reemplazar los %20 de los espacios
+            bloqueGrande.appendChild(bloquePequeño);
 
         }
     }

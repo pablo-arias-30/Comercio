@@ -8,16 +8,27 @@ class AgregarArticuloPresenter {
 
     guardarClick(event) {
         event.preventDefault(); //cancela el evento para que no te lleve a la siguiente ventana
+        let añadido = false; //Cuando ya este un articulo en la cesta, solo modificamos su cantidad 
         let id = leerCookie("id");
         let nombre = leerCookie("nombre");
         let logo = leerCookie("logo");
         let precio = leerCookie("precio");
         let imagen = leerCookie("imagen");
         let color = leerCookie("color");
-        let articulo = this.model.agregarArticulo(id, nombre, imagen, logo, precio, color);
-        console.log(articulo);
-        this.refresh();
-        alert("¡Artículo añadido al carrito!");
+        let cantidad = document.getElementById('cantidad').value;
+        for(let articulo of this.model.compras){
+            if(articulo._id == id){
+                añadido = true;
+                this.model.modificarArticulo(id,cantidad);
+                this.refresh();
+            }
+        
+        }
+            if(!añadido){
+                this.model.agregarArticulo(id, nombre, imagen, logo, precio, color, cantidad);
+                this.refresh();
+        }
+        
         //document.location.href = "compras.php";
 
     }

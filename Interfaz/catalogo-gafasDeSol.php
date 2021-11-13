@@ -62,16 +62,18 @@ if ($conexion->connect_error) {
 <?php
 while ($registro = $resultado->fetch_assoc()) {
     ?>
-    <div id="gafas">
+
     <a href="vistaDetallada.php?id=<?php echo $registro['IDArt'] . '&imagen=' . $registro['imagen'] . '&logo=' . $registro['logo'] .
     '&nombre=' . $registro['nombre'] . '&precio=' . $registro['precio'] . '&color=' . $registro['color'] ?>">
+    <div id="gafas">
         <img id="imagen" src="../Recursos/<?php echo $registro['imagen'] ?>">
         <img id='marca' src="../Recursos/<?php echo $registro['logo'] ?>">
         <p id="p1"><?php echo $registro['nombre'] ?></p>
         <p id="p1"><?php echo $registro['precio'] ?> €</p>
+        </div>
 
  </a>
-    </div>
+
     <?php
 }
 ?>

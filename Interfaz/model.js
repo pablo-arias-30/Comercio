@@ -32,8 +32,8 @@ class ComprasApp {
         //return this._tareas;
         DB.serialize({ compras });
     }
-    agregarArticulo(id, nombre, imagen, logo, precio, color) {
-        let result = new Articulo(id, nombre, imagen, logo, precio, color);
+    agregarArticulo(id, nombre, imagen, logo, precio, color, cantidad) {
+        let result = new Articulo(id, nombre, imagen, logo, precio, color, cantidad);
         //  setTimeout(() => { this.tareas.push(result = new Tarea(titulo, descripcion)); }, 1);
         this._compras.push(result); //un objeto con el array adentro
         DB.serialize({ compras: this._compras });
@@ -52,18 +52,16 @@ class ComprasApp {
 
 
     }
-    /* modificarTarea(id, titulo, descripcion) {
-         //this.borrarTarea(id);
-         //push de una nueva
-         console.log(id);
-         let tarea = this.tareas.find((tarea) => { return tarea._id == id });
-         console.log(tarea);
-         tarea._titulo = titulo;
-         tarea._descripcion = descripcion;
-         DB.serialize({tareas:this._tareas}); //guardamos en la bbdd
-         return tarea;
- 
-     }*/
+    modificarArticulo(id, cantidad) {
+        let articulo = this.compras.find((articulo) => { return articulo._id == id });
+        console.log(articulo);
+        articulo._cantidad = parseInt(articulo._cantidad) + parseInt(cantidad); //ParseInt para hacer una suma y no una concatenacion   
+
+        DB.serialize({ compras: this._compras }); //guardamos en la bbdd
+        return articulo;
+
+    }
+
     verArticulo(id) {
         return this.compras.find((articulo) => { return articulo._id == id });
 
@@ -71,13 +69,14 @@ class ComprasApp {
 }
 
 class Articulo {
-    constructor(id, nombre, imagen, logo, precio, color) {
+    constructor(id, nombre, imagen, logo, precio, color, cantidad) {
         this._id = id;
         this._nombre = nombre;
         this._imagen = imagen;
         this._logo = logo;
         this._precio = precio;
         this._color = color;
+        this._cantidad = cantidad;
 
     }
 }
