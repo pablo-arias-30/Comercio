@@ -383,4 +383,14 @@ ul, li {
     text-decoration: underline;
     background: #E42823;
 }
+#total{
+        float:right;
+        margin-top:-80%;
+        margin-right:35px;  
+        text-align: center;
+        padding:1.5em;
+        background-color: lightblue;;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 24px;
+}
 

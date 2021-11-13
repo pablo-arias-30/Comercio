@@ -56,7 +56,6 @@ class ComprasApp {
         let articulo = this.compras.find((articulo) => { return articulo._id == id });
         console.log(articulo);
         articulo._cantidad = parseInt(articulo._cantidad) + parseInt(cantidad); //ParseInt para hacer una suma y no una concatenacion   
-
         DB.serialize({ compras: this._compras }); //guardamos en la bbdd
         return articulo;
 
