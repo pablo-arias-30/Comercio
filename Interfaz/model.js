@@ -14,7 +14,7 @@ class DB {
 
 class ComprasApp {
     constructor() {
-        //    if (this.tareas == undefined) //no tiene sentido porque nunca sera undifined
+        //    if (this.tareas == undefined) //no tiene sentido porque nunca sera undefined
         //      this.tareas = [];
         this._compras = DB.deserialize()?.compras;
         if (this._compras == undefined)

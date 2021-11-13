@@ -7,12 +7,17 @@
     <title>Catalogo Gafas de Sol</title>
     <script src="model.js"></script>
         <script src="carrito-presenter.js"></script>
+        <script src="agregar-articulo-presenter.js"></script>
+        <script src="borrar-cesta-presenter.js"></script>
+
         <script>
-             let presenter;
             function inicio() {
-           presenter = new CarritoPresenter(new ComprasApp(), document); //document porque el id esta dentro y solo nos interesa el id de la tarea para mostrar el mensaje de que se ha borrado
-           console.log(presenter.model);
-                presenter.refresh();
+                presenterBorrarCarrito = new BorrarCestaPresenter(new ComprasApp(), document); //document porque el id esta dentro y solo nos interesa el id de la tarea para mostrar el mensaje de que se ha borrado
+           presenterNumeroCarrito = new AgregarArticuloPresenter(new ComprasApp(), document); //document porque el id esta dentro y solo nos interesa el id de la tarea para mostrar el mensaje de que se ha borrado
+           presenterNumeroCarrito.refresh();
+           presenterVistaCarrito = new CarritoPresenter(new ComprasApp(), document); //document porque el id esta dentro y solo nos interesa el id de la tarea para mostrar el mensaje de que se ha borrado
+            presenterVistaCarrito.refresh();
+
             }
         </script>
 
@@ -43,13 +48,21 @@
         <li> <a href="pedirCita.php">PEDIR CITA</a></li>
 
     </ul>
+    <div id="borrarCarrito" action="carrito.php">
+    <nav>
+    <form>
+            <input id="borrar" type="submit" value="Vaciar carrito" onclick="presenterBorrarCarrito.borrarCesta(event); ">
+        </form>
+    </nav>
 
+    </div>
     <div id="gafas">
     <div id="imagenCarrito">
     <img id='marca'>
-    <p id="p1"></p>
     <p id="p2"></p>
     <p id="p3"></p>
+    <p id="id"></p>
+
 
 
 

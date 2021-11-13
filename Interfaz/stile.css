@@ -57,9 +57,10 @@
     height: 200px;
     width: 200px;
 }
-#imagenCarrito {
-    height: 100px;
-    width: 100px;
+
+#imagenCarrito img {
+    height: 200px;
+    width: 200px;
 }
 
 #imagenphp {
@@ -122,6 +123,13 @@
     margin-top: -10%;
     margin-right: 7%;
     width: 400px;
+    float: right;
+}
+
+#borrarCarrito {
+    margin-top: -7.5%;
+    margin-right: 13%;
+    width: 150px;
     float: right;
 }
 
@@ -345,4 +353,20 @@ ul, li {
     color: white;
     text-decoration: underline;
     background: #1244C2;
+}
+
+#borrar {
+    width: 100%;
+    background: red;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+}
+
+#borrar:hover {
+    color: white;
+    text-decoration: underline;
+    background: #E42823;
 }

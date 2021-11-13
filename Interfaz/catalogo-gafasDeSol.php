@@ -20,6 +20,7 @@ if ($conexion->connect_error) {
     <link rel="stylesheet" href="stile.css" type="text/css">
     <title>Catalogo Gafas de Sol</title> <script src="model.js"></script>
         <script src="agregar-articulo-presenter.js"></script>
+        <script src="carrito-presenter.js"></script>
         <script>
              let presenter;
             function inicio() {
