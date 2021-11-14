@@ -9,7 +9,7 @@ class AgregarArticuloPresenter {
     guardarClick(event) {
         event.preventDefault(); //cancela el evento para que no te lleve a la siguiente ventana
         let añadido = false; //Cuando ya este un articulo en la cesta, solo modificamos su cantidad 
-        let id = leerCookie("id");
+        let id = leerCookie("idA");
         let nombre = leerCookie("nombre");
         let logo = leerCookie("logo");
         let precio = leerCookie("precio");

@@ -24,7 +24,7 @@
 
 <body onload="inicio()">
 <?php
-$id = $_GET['id'];
+$id = $_GET['idA'];
 $nombre = $_GET['nombre'];
 $precio = $_GET['precio'];
 $imagen = $_GET['imagen'];
@@ -60,7 +60,7 @@ setcookie("logo", "$logo", time() + 3600, "/");
 setcookie("nombre", "$nombre", time() + 3600, "/");
 setcookie("color", "$color", time() + 3600, "/");
 setcookie("logo", "$logo", time() + 3600, "/");
-setcookie("id", "$id", time() + 3600, "/");
+setcookie("idA", "$id", time() + 3600, "/");
 setcookie("precio", "$precio", time() + 3600, "/");?>
 
     <div id="gafasphp">
