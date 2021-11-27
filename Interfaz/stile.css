@@ -1,26 +1,74 @@
+#img1 {
+    margin-left: 1.5%;
+    clear: both;
+}
+#perfilUsuario{
+    display: block;
+    margin: auto;
+    height: 150px;
+    width: 150px;
+}
+#icono-dni{
+    margin-top:9%;
+    margin-left: 0%;
+    float:left;
+    height:25px;
+    width:25px;
+}
+#icono-nombre{
+    margin-top:0%;
+    margin-left: 0%;
+    float:left;
+    height:40px;
+    width:25px;
+}
+#icono-nacimiento{
+    margin-top:11%;
+    margin-left: 0%;
+    float:left;
+    height:20px;
+    width:20px;
+}
+#icono-telefono{
+    margin-top:11%;
+    margin-left: 0%;
+    float:left;
+    height:20px;
+    width:20px;
+}
+#icono-direccion{
+    margin-top:11%;
+    margin-left: 0%;
+    float:left;
+    height:20px;
+    width:20px;
+}
+#icono-email{
+    margin-top:11%;
+    margin-left: 0%;
+    float:left;
+    height:20px;
+    width:20px;
+}
+#datos1{
+    float:left;
+}
+
+#datos2{
+    margin-left: 300px;
+    margin-top: 0%;
+    float: right;
+}
+
 #gafas {
+    margin-left: 23%;
     margin-top: 2%;
-    margin-left: 20%;
     width: 234px;
     padding: 2%;
     padding-right: 0%;
     border: solid;
     border-width: 2px;
     border-color: darkgray;
-    clear: both;
-    display: inline-block;
-}
-
-#gafasphp {
-    margin-top: 2%;
-    margin-left: 20%;
-    width: 1000px;
-    padding: 2%;
-    padding-right: 0%;
-    border: solid;
-    border-width: 2px;
-    border-color: darkgray;
-    clear: both;
     display: inline-block;
 }
 
@@ -31,97 +79,27 @@
     display: inline-block;
 }
 
-#marcaphp {
-    height: 50px;
-    width: 100px;
-    margin-left: 15%;
-    display: inline-block;
-}
-
-#nombre {
-    margin-top: 0%;
-    margin-right: 4%;
-    width: 450px;
-    text-align: center;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    display: inline-block;
-    float: right;
-}
-
-#imagen {
+#g1 {
     height: 200px;
     width: 200px;
-}
-
-#imagenphp {
-    margin-top: 0%;
-    margin-left: 1%;
-    height: 400px;
-    width: 400px;
 }
 
 #p1 {
     text-align: center;
     width: 220px;
-    color: black;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-#p2 {
-    text-align: center;
-    width: 220px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-#id {
-    text-align: center;
-    width: 220px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-#colorphp {
-    margin-top: -30%;
-    margin-right: 15%;
-    text-align: center;
-    width: 220px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+#gafas2 {
+    margin-left: 4%;
+    margin-top: 2%;
+    width: 234px;
+    padding: 2%;
+    padding-right: 0%;
+    border: solid;
+    border-width: 2px;
+    border-color: darkgray;
     display: inline-block;
-    float: right;
-}
-
-#preciophp {
-    margin-top: -25%;
-    margin-right: 15%;
-    text-align: center;
-    font-weight: bolder;
-    width: 220px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    display: inline-block;
-    float: right;
-}
-
-#idphp {
-    margin-top: -19%;
-    margin-right: 15%;
-    text-align: center;
-    width: 220px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    display: inline-block;
-    float: right;
-}
-
-#enlace {
-    margin-top: -10%;
-    margin-right: 7%;
-    width: 400px;
-    float: right;
-}
-
-#borrarCarrito {
-    margin-top: -7.5%;
-    margin-right: 13%;
-    width: 150px;
-    float: right;
 }
 
 #usuario {
@@ -140,12 +118,17 @@
     margin-right: 10px;
 }
 
-#cerrarSesion {
-    float: right;
-    width: 35px;
-    height: 35px;
-    margin-top: 20px;
-    margin-right: 20px;
+h1 {
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+}
+
+h1::before {
+    left: -220px;
+}
+
+h1::after {
+    right: -220px;
 }
 
 .texto {
@@ -160,7 +143,7 @@
 h2 {
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
-    font-size: 1.5em;
+    font-size: 2em;
 }
 
 a {
@@ -188,6 +171,8 @@ ul, li {
     margin-bottom: 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+
 
 .controls {
     width: 100%;
@@ -221,15 +206,8 @@ ul, li {
     font-size: 16px;
 }
 
-.form-registro .botones:hover {
-    color: white;
-    text-decoration: underline;
-    background: #1244C2;
-}
-
 .Menu {
     width: 15%;
-    margin-right: 5%;
     overflow: hidden;
     position: absolute;
     top: 140px;
@@ -304,6 +282,7 @@ ul, li {
     padding-left: 20px;
 }
 
+
 .dentro li a {
     display: inline-block;
     text-decoration: none;
@@ -311,88 +290,4 @@ ul, li {
     color: black;
     font-family: sans-serif;
     font-size: 2em;
-}
-
-#gafas a {
-    color: black;
-    text-decoration: none;
-}
-
-#gafas:hover {
-    background-color: lightblue;
-}
-
-#cesta {
-    margin-top: 3px;
-    float: right;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 20px;
-    font-weight: bolder;
-}
-
-#añadir {
-    width: 100%;
-    background: blue;
-    border: none;
-    padding: 12px;
-    color: white;
-    margin: 16px 0;
-    font-size: 16px;
-}
-
-#pCantidad {
-    text-align: center;
-    width: 220px;
-    color: black;
-    margin-left: 25%;
-    margin-top: 0%;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-#cantidad {
-    width: 25%;
-    height: 50%;
-    ;
-    background: lightblue;
-    margin-left: 35%;
-    margin-bottom: 3%;
-    ;
-    border: none;
-    padding: 12px;
-    color: black;
-    font-size: 16px;
-}
-
-#añadir:hover {
-    color: white;
-    text-decoration: underline;
-    background: #1244C2;
-}
-
-#borrar {
-    width: 100%;
-    background: red;
-    border: none;
-    padding: 12px;
-    color: white;
-    margin: 16px 0;
-    font-size: 16px;
-}
-
-#borrar:hover {
-    color: white;
-    text-decoration: underline;
-    background: #E42823;
-}
-
-#total {
-    clear:both;
-    margin-top: -90%;
-    margin-left: 72%;
-    text-align: center;
-    padding: 10px;
-    width: 340px;
-    background-color: lightblue;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 24px;
 }
