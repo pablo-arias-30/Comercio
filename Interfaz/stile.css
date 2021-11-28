@@ -11,6 +11,20 @@
     display: inline-block;
 }
 
+#resumen {
+    margin-top: 80px;
+    margin-left: 280px;
+    margin-bottom: 0px;;
+    padding: 1em;
+    width: 850px;
+    height: 130px;
+    border: solid;
+    border-width: 2px;
+    border-color: darkgray;
+    clear: both;
+    display: inline-block;
+}
+
 #gafasphp {
     margin-top: 2%;
     margin-left: 20%;
@@ -29,6 +43,13 @@
     width: 100px;
     margin-left: 22%;
     display: inline-block;
+}
+
+#marcaPequeña {
+    height: 50px;
+    width: 100px;
+    margin: 50px;
+    float: right;
 }
 
 #marcaphp {
@@ -54,6 +75,45 @@
     margin: 10px;
 }
 
+#imagenPequeña {
+    margin-top: -15px;
+    bottom: 20px;
+    height: 130px;
+    width: 130px;
+
+}
+
+#pCarro {
+    display: inline-block;
+    vertical-align: top;
+    width: 700px;
+    color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#pResumen2 {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 40px;
+    color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#pResumen3 {
+    float: right;
+    width: 150px;
+    color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#pResumen5 {
+    clear: both;
+    width: 250px;
+    margin-left: 40px;
+    color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 #imagenphp {
     margin-top: 0%;
     margin-left: 1%;
@@ -73,7 +133,9 @@
     width: 220px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-
+h3 {
+    font-family: sans-serif;
+}
 #id {
     text-align: center;
     width: 220px;
@@ -124,9 +186,10 @@
     top: 130px;
     width: 150px;
 }
+
 #realizarCompra {
     position: absolute;
-    right: 245px;
+    right: 225px;
     top: 130px;
     width: 150px;
 }
@@ -150,11 +213,13 @@
 }
 
 #cerrarSesion {
-    float: right;
+    position: absolute;
     width: 35px;
     height: 35px;
-    margin-top: 20px;
-    margin-right: 20px;
+    margin-top: 25px;
+    right: 140px;
+    margin-right: 10px;
+
 }
 
 .texto {
@@ -313,8 +378,13 @@ ul, li {
     padding-left: 20px;
 }
 
+.dentro li {
+    float: left;
+    margin-right: 40px;
+    margin-top: 20px;
+}
+
 .dentro li a {
-    display: inline-block;
     text-decoration: none;
     margin: 0.7px;
     color: black;
@@ -412,8 +482,8 @@ ul, li {
 
 #total {
     position: absolute;
-    top:190px;
-    right:50px;
+    top: 190px;
+    right: 50px;
     text-align: center;
     padding: 10px;
     width: 340px;

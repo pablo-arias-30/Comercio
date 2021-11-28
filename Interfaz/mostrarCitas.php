@@ -50,87 +50,26 @@ if ($conexion->connect_error) {
 <head>
     <meta charset=utf-8 />
     <link rel="stylesheet" href="stile.css" type="text/css">
-    <title>Mis Citas</title> <script src="model.js"></script>
-        <script src="agregar-articulo-presenter.js"></script>
-        <script>
-             let presenter;
-            function inicio() {
-           // presenter.init();
-           presenter = new AgregarArticuloPresenter(new ComprasApp(), document); //document porque el id esta dentro y solo nos interesa el id de la tarea para mostrar el mensaje de que se ha borrado
-                console.log(presenter.model);
-                presenter.refresh();
+    <title>Mis Citas</title>
+    <script src="model.js"></script>
+    <script src="agregar-articulo-presenter.js"></script>
+    <script>
+    let presenter;
 
-            }
-        </script>
+    function inicio() {
+        // presenter.init();
+        presenter = new AgregarArticuloPresenter(new ComprasApp(),
+            document
+        ); //document porque el id esta dentro y solo nos interesa el id de la tarea para mostrar el mensaje de que se ha borrado
+        console.log(presenter.model);
+        presenter.refresh();
+
+    }
+    </script>
 
 </head>
 
 <body onload="inicio()">
-
-    <a href="index.html"><img id="imimagen" src="../Recursos/VISUALVISION.png"></a>
-    <a href="carrito.php"><img id="compra" src="../Recursos/carrito.png"></a>
-    <label id="cesta" width=2px height=2px>0</label>
-    <a href="miperfil.php"><img id="usuario" src="../Recursos/usuario.png"></a>
-    <a href="../Servidor/cerrarSesion.php"><img id="cerrarSesion" src= "../Recursos/cerrarSesion.png"></a>
-
-
-    <h2 id="nombrePerfil">Hola, <?php echo $_COOKIE["usuario"] ?></h2>
-
-    <div class="perfil">
-
-        <div class="dentro">
-            <ul>
-                <li><img src="../Recursos/pedidos.png" width="50px" height="50px"><a href="">Mis pedidos</a>
-                </li>
-                <li><img src="../Recursos/reloj.png" width="50px" height="50px"><a href="mostrarCitas.php">Mis citas</a><br><br>
-                </li>
-                <?php
-$citas = array();
-$horas = array();
-$citas = $_SESSION['fechaCita'];
-$horas = $_SESSION['horaCita'];
-
-for ($i = 0; $i < sizeof($citas); $i++) {
-    echo "<h3>Día: $citas[$i]" . ' a las ' . "$horas[$i]</h3>" . '<br>';
-}
-?><br>
-        </div>
-    <br>
-
-            </ul>
-            <br><br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br><br>
-            <br>
-            <br>
-            <br><br>
-            <br>
-            <br>
-            <br><br>
-            <br>
-            <br>
-            <br><br>
-            <br>
-            <br>
-            <br>
-
-    </div>
 
 
     <ul class="Menu">
@@ -151,6 +90,75 @@ for ($i = 0; $i < sizeof($citas); $i++) {
         <li> <a href="pedirCita.php">PEDIR CITA</a></li>
 
     </ul>
+
+    <a href="index.html"><img id="imimagen" src="../Recursos/VISUALVISION.png"></a>
+    <a href="carrito.php"><img id="compra" src="../Recursos/carrito.png"></a>
+    <label id="cesta" width=2px height=2px>0</label>
+    <a href="miperfil.php"><img id="usuario" src="../Recursos/usuario.png"></a>
+    <a href="../Servidor/cerrarSesion.php"><img id="cerrarSesion" src="../Recursos/cerrarSesion.png"></a>
+
+
+    <h2 id="nombrePerfil">Hola, <?php echo $_COOKIE["usuario"] ?></h2>
+
+    <div class="perfil">
+
+        <div class="dentro">
+            <ul>
+                <li><img src="../Recursos/reloj.png" width="50px" height="50px"><a href="mostrarCitas.php">Mis
+                        citas</a><br><br>
+                </li>
+                <li><img src="../Recursos/pedidos.png" width="50px" height="50px"><a href="">Mis pedidos</a>
+                </li>
+                <br><br><br><br><br><br>
+
+                <?php
+$citas = array();
+$horas = array();
+$citas = $_SESSION['fechaCita'];
+$horas = $_SESSION['horaCita'];
+            
+for ($i = 0; $i < sizeof($citas); $i++) {
+    echo '<h3>'.($i+1).': Día: '.$citas[$i].'a las '.$horas[$i].'</h3>';
+}
+?><br>
+        </div>
+        <br>
+
+        </ul>
+        <br><br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br><br>
+        <br>
+        <br>
+        <br><br>
+        <br>
+        <br>
+        <br><br>
+        <br>
+        <br>
+        <br><br>
+        <br>
+        <br>
+        <br>
+
+    </div>
+
 </body>
 
 </html>

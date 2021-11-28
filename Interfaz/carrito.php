@@ -66,7 +66,7 @@
         </div>
         <div id="realizarCompra">
             <nav>
-                <form action="pago.html">
+                <form action="pago.php">
                     <input id="comprar" type="submit" value="Realizar pago">
                 </form>
             </nav>

@@ -21,13 +21,11 @@ class CarritoPresenter {
                 suma += articulo._precio * articulo._cantidad; //Precio total de la compra
                 console.log(articulo);
                 let bloquePequeño = document.createElement('div');
-                bloquePequeño.innerHTML = '<div id="gafas"><a href="vistaDetallada.php?idA=' + articulo._id + '&nombre=' + articulo._nombre + '&precio='
-                    + articulo._precio + '&logo=' + articulo._logo + '&imagen=' + articulo._imagen + '&color= ' + articulo._color + '<p id="p1"></p><img id="imagen" src="../Recursos/' + articulo._imagen + '"></img>'
-                    + '<img id="marca" src="../Recursos/' + articulo._logo + '"></img>' +
-                    '<p id="p1"><strong>' + articulo._nombre.replace(/%20/g, " ") + '</strong></p><p id="p1">Color:' + articulo._color + '</p>' +
-                    '<p id="p1">Precio por unidad: <strong>' + articulo._precio + ' €</strong></p>' +
-                    '<p id="p1">Cantidad seleccionada: <strong>' + articulo._cantidad + '</strong></p>' +
-                    '<p id="p1">ID de Referencia:' + articulo._id + '</p> </a></div>';
+                bloquePequeño.innerHTML = '<div id="resumen"><a href="vistaDetallada.php?idA=' + articulo._id + '&nombre=' + articulo._nombre + '&precio='
+                    + articulo._precio + '&logo=' + articulo._logo + '&imagen=' + articulo._imagen + '&color= ' + articulo._color + 
+                    '<p id="pResumen"></p><img id="imagenPequeña" src="../Recursos/' + articulo._imagen + '"></img>'
+                    + '<div id="pCarro"><p id="pResumen2"><strong>' + articulo._nombre.replace(/%20/g, " ") + '</p> &nbsp&nbsp&nbsp&nbsp <p id="pResumen3"></strong>'+ articulo._precio + ' €/ud</p>' +
+                    '<p id="pResumen5">Cantidad: ' + articulo._cantidad + '</p></div>'+'</a></div>';
                 //Añadimos precio, color, cantidad, imagen, etc. Replace nos permite reemplazar los %20 de los espacios
                 bloqueGrande.appendChild(bloquePequeño);
 
@@ -40,3 +38,4 @@ class CarritoPresenter {
     }
 }
 
+/*'<img id="marcaPequeña" src="../Recursos/' + articulo._logo + '"></img>' +*/
