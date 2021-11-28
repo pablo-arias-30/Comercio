@@ -68,7 +68,7 @@ setcookie("precio", "$precio", time() + 3600, "/");?>
         <img id="imagenphp" src="../Recursos/<?php echo $imagen ?>">
         <img id='marcaphp' src="../Recursos/<?php echo $logo ?>">
         <p id="colorphp">Color: <?php echo $color ?></p>
-        <p id="preciophp"><?php echo $precio ?> €</p>
+        <p id="preciophp">Precio: <?php echo $precio ?> €</p>
         <p id ="idphp">ID de referencia: <?php echo $id ?></p>
         <div id="enlace">
     <nav>

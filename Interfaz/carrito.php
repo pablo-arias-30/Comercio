@@ -55,19 +55,26 @@
         <li> <a href="pedirCita.php">PEDIR CITA</a></li>
 
     </ul>
-    <div id="borrarCarrito" action="carrito.php">
-        <nav>
-            <form>
-                <input id="borrar" type="submit" value="Vaciar carrito"
-                    onclick="presenterBorrarCarrito.borrarCesta(); ">
-            </form>
-        </nav>
+    <div id="vaciar">
+        <div id="borrarCarrito">
+            <nav>
+                <form>
+                    <input id="borrar" type="submit" value="Vaciar carrito"
+                        onclick="presenterBorrarCarrito.borrarCesta(); ">
+                </form>
+            </nav>
+        </div>
+        <div id="realizarCompra">
+            <nav>
+                <form action="pago.html">
+                    <input id="comprar" type="submit" value="Realizar pago">
+                </form>
+            </nav>
+        </div>
 
+        <div id="bloqueGrande">
+        </div>
     </div>
-
-    <div id="bloqueGrande">
-    </div>
-
 </body>
 
 </html>
