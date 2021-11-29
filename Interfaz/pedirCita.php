@@ -1,3 +1,5 @@
+
+<?php session_start();?>
 <?php if (!isset($_COOKIE["usuario"])) { //Aún no se ha iniciado sesión
     echo '<script type="text/javascript">
     alert("Debes iniciar sesión para poder pedir cita");
@@ -43,7 +45,7 @@
             <ul>
                 <li><a href="catalogo-gafasDeSol.php">Gafas de sol</a></li>
                 <li><a href="catalogo-gafasDeVista.php">Gafas de vista</a></li>
-                <li><a href="catalogo-otros.html">Otros</a></li>
+                <li><a href="catalogo-otros.php">Otros</a></li>
             </ul>
         </li>
         <li><a href="miperfil.php">MI CUENTA</a>

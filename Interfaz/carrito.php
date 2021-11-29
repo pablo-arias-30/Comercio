@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<?php session_start();?>
 
 <head>
     <meta charset=utf-8 />
@@ -25,6 +26,10 @@
         presenterNumeroCarrito.refresh();
 
 
+        let total = presenterVistaCarrito.precioTotal();
+        console.log(total);
+        document.cookie = 'total=' + total;
+
     }
     </script>
 
@@ -43,7 +48,7 @@
             <ul>
                 <li><a href="catalogo-gafasDeSol.php">Gafas de sol</a></li>
                 <li><a href="catalogo-gafasDeVista.php">Gafas de vista</a></li>
-                <li><a href="catalogo-otros.html">Otros</a></li>
+                <li><a href="catalogo-otros.php">Otros</a></li>
             </ul>
         </li>
         <li><a href="miperfil.php">MI CUENTA</a>
@@ -66,8 +71,9 @@
         </div>
         <div id="realizarCompra">
             <nav>
-                <form action="pago.php">
+                <form action="../Servidor/guardarPago.php">
                     <input id="comprar" type="submit" value="Realizar pago">
+
                 </form>
             </nav>
         </div>

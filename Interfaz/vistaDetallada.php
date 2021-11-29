@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-
+<?php session_start();?>
 <head>
     <meta charset=utf-8 />
     <link rel="stylesheet" href="stile.css" type="text/css">
@@ -43,7 +43,7 @@ $color = $_GET['color'];
             <ul>
                 <li><a href="catalogo-gafasDeSol.php">Gafas de sol</a></li>
                 <li><a href="catalogo-gafasDeVista.php">Gafas de vista</a></li>
-                <li><a href="catalogo-otros.html">Otros</a></li>
+                <li><a href="catalogo-otros.php">Otros</a></li>
             </ul>
         </li>
         <li><a href="miperfil.php">MI CUENTA</a>
@@ -55,13 +55,13 @@ $color = $_GET['color'];
         <li> <a href="pedirCita.php">PEDIR CITA</a></li>
 
     </ul>
-    <?php setcookie("imagen", "$imagen", time() + 3600, "/");
-setcookie("logo", "$logo", time() + 3600, "/");
-setcookie("nombre", "$nombre", time() + 3600, "/");
-setcookie("color", "$color", time() + 3600, "/");
-setcookie("logo", "$logo", time() + 3600, "/");
-setcookie("idA", "$id", time() + 3600, "/");
-setcookie("precio", "$precio", time() + 3600, "/");?>
+    <?php setcookie("imagen", "$imagen", time() + 86400, "/");
+setcookie("logo", "$logo", time() + 86400, "/");
+setcookie("nombre", "$nombre", time() + 86400, "/");
+setcookie("color", "$color", time() + 86400, "/");
+setcookie("logo", "$logo", time() + 86400, "/");
+setcookie("idA", "$id", time() + 86400, "/");
+setcookie("precio", "$precio", time() + 86400, "/");?>
 
     <div id="gafasphp">
     <h2 id="nombre"><?php echo $nombre ?></h2>

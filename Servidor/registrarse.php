@@ -4,10 +4,10 @@ function procesaResultado($resultado,$nombre,$dni,$contrasena,$email)
 {
     if ($resultado) {
         //inserción correcta
-        setcookie("usuario", "$nombre", time() + 3600, "/");
-        setcookie("dni", "$dni", time() + 3600, "/");
-        setcookie("contraseña", "$contrasena", time() + 3600, "/");
-        setcookie("email", "$email", time() + 3600, "/");
+        setcookie("usuario", "$nombre", time() + 86400, "/");
+        setcookie("dni", "$dni", time() + 86400, "/");
+        setcookie("contraseña", "$contrasena", time() + 86400, "/");
+        setcookie("email", "$email", time() + 86400, "/");
 
 
         header("Location: ../Interfaz/miperfil.php");

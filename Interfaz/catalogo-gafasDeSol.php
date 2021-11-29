@@ -1,3 +1,5 @@
+<?php session_start();?>
+
 <?php
 //Conexion a BBDD
 $consulta = "SELECT * FROM articulo WHERE tipo ='Gafas de sol'";
@@ -47,7 +49,7 @@ if ($conexion->connect_error) {
             <ul>
                 <li><a href="catalogo-gafasDeSol.php">Gafas de sol</a></li>
                 <li><a href="catalogo-gafasDeVista.php">Gafas de vista</a></li>
-                <li><a href="catalogo-otros.html">Otros</a></li>
+                <li><a href="catalogo-otros.php">Otros</a></li>
             </ul>
         </li>
         <li><a href="miperfil.php">MI CUENTA</a>

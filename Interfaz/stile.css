@@ -16,7 +16,7 @@
     margin-left: 280px;
     margin-bottom: 0px;;
     padding: 1em;
-    width: 850px;
+    width: 950px;
     height: 130px;
     border: solid;
     border-width: 2px;
@@ -43,13 +43,6 @@
     width: 100px;
     margin-left: 22%;
     display: inline-block;
-}
-
-#marcaPequeña {
-    height: 50px;
-    width: 100px;
-    margin: 50px;
-    float: right;
 }
 
 #marcaphp {
@@ -184,6 +177,12 @@ h3 {
     position: absolute;
     right: 50px;
     top: 130px;
+    width: 150px;
+}
+#cancelarCompra {
+    position: absolute;
+    right: 90px;
+    top: 135px;
     width: 150px;
 }
 
@@ -459,6 +458,21 @@ ul, li {
 }
 
 #borrar:hover {
+    color: white;
+    text-decoration: underline;
+    background: #E42823;
+}
+#cancelar {
+    width: 100%;
+    background: red;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+}
+
+#cancelar:hover {
     color: white;
     text-decoration: underline;
     background: #E42823;

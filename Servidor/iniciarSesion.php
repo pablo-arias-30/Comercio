@@ -5,7 +5,7 @@ function procesaResultado($resultado)
     while ($registro = $resultado->fetch_assoc()) {
         if (!empty($registro["nombre"])) { //Se ha encontrado a esa persona
             $nombre = $registro["nombre"];
-            setcookie("usuario", "$nombre", time() + 3600, "/");
+            setcookie("usuario", "$nombre", time() + 86400, "/");
             header("Location: ../Interfaz/miperfil.php");
         }
     }
@@ -18,8 +18,8 @@ if ($_POST) {
     if (!empty($_POST["email"]) && !empty($_POST["contraseña"])) {
         $email = $_POST["email"];
         $contrasena = $_POST["contraseña"];
-        setcookie("email", "$email", time() + 3600, "/");
-        setcookie( "contraseña", "$contrasena", time() + 3600, "/");
+        setcookie("email", "$email", time() + 86400, "/");
+        setcookie( "contraseña", "$contrasena", time() + 86400, "/");
 
         //SACAR DNI DEL CLIENTE PARA SABER QUIEN ES Y YA BUSCAR SU CONTRASEÑA
 

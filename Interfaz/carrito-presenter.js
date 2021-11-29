@@ -36,6 +36,14 @@ class CarritoPresenter {
             bloquePrecio.appendChild(precioTotal);
         }
     }
+    precioTotal(){
+        
+        let suma=0;
+        for (let articulo of this.model.compras) {
+            suma += articulo._precio * articulo._cantidad; //Precio total de la compra
+    }
+    return suma;
+}
 }
 
 /*'<img id="marcaPequeña" src="../Recursos/' + articulo._logo + '"></img>' +*/
