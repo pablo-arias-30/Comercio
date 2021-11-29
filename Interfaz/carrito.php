@@ -71,7 +71,7 @@
         </div>
         <div id="realizarCompra">
             <nav>
-                <form action="../Servidor/guardarPago.php">
+                <form action="../Interfaz/pago.php">
                     <input id="comprar" type="submit" value="Realizar pago">
 
                 </form>

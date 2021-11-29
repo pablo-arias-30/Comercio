@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 
 function procesarCliente($resultado,$conexion)
@@ -11,13 +12,15 @@ function procesarCliente($resultado,$conexion)
 }
 }
 function procesarCompra($dni,$conexion){
-    $consulta = 'SELECT * FROM cliente WHERE contrasena='.$_COOKIE["contrasena"]. 'AND correo='.$_COOKIE["email"];
+    $consulta = 'SELECT dni FROM cliente WHERE contrasena='.$_COOKIE["contrasena"]. 'AND correo='.$_COOKIE["email"];
+    $resultado = mysqli_query($conexion, $consulta);
+
 }
 
 if ($_POST) {
 
 //Conexion a BBDD
-        $consulta = 'SELECT * FROM cliente WHERE contrasena='.$_COOKIE["contrasena"]. 'AND correo='.$_COOKIE["email"];
+        $consulta = 'SELECT dni FROM cliente WHERE contrasena='.$_COOKIE["contrasena"]. 'AND correo='.$_COOKIE["email"];
         echo $consulta;
         $conexion = new mysqli('localhost', 'root', '', 'proyecto comercio');
         $conexion->set_charset('utf8');
