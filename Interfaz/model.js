@@ -12,6 +12,7 @@ class DB {
     }
 }
 
+
 class ComprasApp {
     constructor() {
         //    if (this.tareas == undefined) //no tiene sentido porque nunca sera undefined
