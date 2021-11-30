@@ -28,7 +28,7 @@
 
         let total = presenterVistaCarrito.precioTotal();
         console.log(total);
-        document.cookie = 'total=' + total;
+        document.cookie = 'total=' + total +' ;max-age=3600*60; path=/';
 
     }
     </script>

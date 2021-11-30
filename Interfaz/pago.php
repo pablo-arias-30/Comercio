@@ -71,7 +71,7 @@
             <h3>Complete la información de pago</h3>
             <form  action="../Servidor/guardarPago.php" method="POST">
                 Nombre y apellidos<br><br>
-                <input class="controls" type="text" name="nombre" value='<?php echo $_COOKIE["usuario"] ?>'><br><br>
+                <input class="controls" type="text" name="nombreC" value='<?php echo $_COOKIE["usuario"] ?>'><br><br>
                 Teléfono de contacto:<br><br>
                 <input class="controls" type="text" name="telefono"><br><br>
                 Dirección de envío:<br><br>
@@ -79,10 +79,10 @@
                     placeholder="C/ ..............., nº 28, 4º J, Albacete"><br><br>
                 Código Postal:<br><br>
                 <input class="controls" type="text" name="codigoPostal"><br><br>
+                Provincia:<br><br>
+                <input class="controls" type="text" name="provincia"><br><br>
                 Ciudad:<br><br>
                 <input class="controls" type="text" name="ciudad"><br><br>
-                País:<br><br>
-                <input class="controls" type="text" name="pais"><br><br>
                 
                 Para completar el pago, será redireccionado a PayPal
                 <p> <input class="check" type="checkbox"> Acepto los <a href="#">Terminos y Condiciones</a>

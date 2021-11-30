@@ -66,21 +66,18 @@
     </ul>
     <div id="fondo2">
         <section class="form-registro">
-            <h3>Precio a pagar: <?php echo $_COOKIE["total"]?> €</h3>
+            <h3>Precio a pagar: <?php echo $_SESSION["total"] ?> €</h3>
             <form method="POST" action="https://www.sandbox.paypal.com/cgi-bin/webscr">
                 <input type="hidden" name="cmd" value="_xclick">
                 <input type="hidden" name="cancel_return" value="http://localhost/Servidor/procesarPago.php">
                 <input type="hidden" name="business" value='sb-5t3dd8614688@business.example.com'>
                 <input type="hidden" name="item_name" value="Compra en VISUALVISION">
                 <input type="hidden" name="currency_code" value="EUR">
+                <input type="hidden" name="business_name" value="VISUALVISION">
                 <input type="hidden" name="return" value="http://localhost/Servidor/procesarPago.php">
-                <input type="hidden" name="first_name" value="VISUALVISION">
-                <input type="hidden" name="address_override" value="1">
-                <input type="hidden" name="address1" value='<?php echo $_SESSION['direccion']?>'>
-                <input type="hidden" name="zip" value='<?php echo $_SESSION['codigoPostal']?>'>
-                <input type="hidden" name="lc" value='<?php echo $_SESSION['pais']?>'>
-                <input type="hidden" name="city" value='<?php echo $_SESSION['ciudad']?>'>
-                <input type="hidden" name="amount" value='<?php echo $_COOKIE["total"]?>'>
+                <input type="hidden" name="paymentaction" value="sale">
+                <input type="hidden" name="first_name" value='<?php echo $_SESSION['nombreC'] ?>'>
+                <input type="hidden" name="amount" value='<?php echo $_SESSION["total"] ?>'>
                 <button id="borrar">
                     <input class="botones" type="submit" value="Realizar pago">
                     <input type="image"

@@ -1,7 +1,7 @@
 <?php session_start();?>
 <?php
 //Conexion a BBDD
-$consulta = "SELECT * FROM articulo WHERE tipo ='Gafas de cerca' || tipo = 'Gafas progresivas'";
+$consulta = "SELECT * FROM articulo WHERE tipo ='Gafas de cerca' || tipo = 'Gafas progresivas' AND cantidad >0";
 $conexion = new mysqli('localhost', 'root', '', 'proyecto comercio');
 $conexion->set_charset('utf8');
 //establece el conjunto de caracteres en la conexión, para que no haya problema de acentos y ñ de los campos
