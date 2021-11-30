@@ -43,6 +43,10 @@ function procesarCantidad($resultado, $conexion, $i, $parar)
         </script>';
         }
     }
+    mysqli_close($conexion);
+    echo '<script>alert("Lo sentimos, no hay el stock necesario para su compra");
+document.location.href = "../Interfaz/carrito.php";
+</script>';
 }
 
 if (!empty($_POST["direccion"]) && !empty($_POST["nombreC"])
