@@ -25,10 +25,21 @@
         ); //document porque el id esta dentro y solo nos interesa el id de la tarea para mostrar el mensaje de que se ha borrado
         presenterNumeroCarrito.refresh();
 
-
+        modelo = new ComprasApp();
+        console.log(modelo);
+        for (let i = 0; i < modelo.compras.length; i++) {
+            //(this es el documento)
+            document.cookie = "compras" + i + "=" + modelo._compras[i]._id + ";max-age=3600*60; path=/";
+            document.cookie = "precios" + i + "=" + modelo._compras[i]._precio + ";max-age=3600*60; path=/";
+            document.cookie = "cantidades" + i + "=" + modelo._compras[i]._cantidad + ";max-age=3600*60; path=/";
+        }
+        
         let total = presenterVistaCarrito.precioTotal();
         console.log(total);
-        document.cookie = 'total=' + total +' ;max-age=3600*60; path=/';
+        document.cookie = 'total=' + total + ' ;max-age=3600*60; path=/';
+        let items = presenterVistaCarrito.numeroItems();
+        document.cookie = 'items=' + items + ' ;max-age=3600*60; path=/';
+
 
     }
     </script>

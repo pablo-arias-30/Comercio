@@ -14,41 +14,49 @@ function procesarCliente($resultado, $conexion)
 function procesarCompra($dni, $conexion)
 {
     $ids = array();
-    $ids = $_SESSION["ids"];
     $cantidades = array();
-    $cantidades = $_SESSION["cantidades"];
-    for ($i = 0; $i < count($ids); $i++) {
+    $precios = array();
+
+    for ($i = 0; $i < sizeof($_SESSION["ids"]); $i++) {
+        $ids[$i] = $_SESSION["ids"][$i];
+        $cantidades[$i] = $_SESSION["cantidades"][$i];
+        $precios[$i] = $_SESSION["precios"][$i];
+    }
+
+    $direccion = $_SESSION["direccion"];
+    $fecha = date("y/m/d");
+    $total = $_SESSION["total"];
+    $idCompra = rand(1, 9999); //Genera ID único automáticamente
+    $consulta = "INSERT INTO compra values ( $idCompra , '$fecha ', '$total', '$direccion ', '$fecha', ' $dni');";
+    $resultado = mysqli_query($conexion, $consulta);
+
+    if($resultado){
+    for ($i = 0; $i <count($ids); $i++) {
         $consulta = 'UPDATE articulo SET cantidad =(cantidad - ' . $cantidades[$i] . ') WHERE IDArt = ' . $ids[$i];
         $resultado = mysqli_query($conexion, $consulta);
         if ($resultado) {
-            $direccion = $_SESSION["direccion"];
-            $fecha = date("y/m/d");
-            $total = $_SESSION["total"];
-            $idCompra = rand(1, 9999); //Genera ID único automáticamente
-            $consulta = "INSERT INTO compra values ( $idCompra , '$fecha ', '$total', '$direccion ', '$fecha', ' $dni');";
-            $resultado = mysqli_query($conexion, $consulta);
-            if ($resultado) {
-                $unidades = $cantidades[$i]; //Numero de artículos
                 $idLinea = rand(1, 9999); //Genera ID único automáticamente
-                $consulta = "INSERT INTO lineacompra values ( $idLinea , '$unidades', '$total', '$idCompra ', ' $ids[$i]');";
+                $precio = $precios[$i] * $cantidades[$i];
+                $consulta = "INSERT INTO lineacompra values ( $idLinea ,  '$cantidades[$i]' , '$precio', '$idCompra ', ' $ids[$i]');";
                 $resultado = mysqli_query($conexion, $consulta);
-                if ($resultado && $i==(count($ids)-1)) { //Pago con éxito
-                    echo "hola3";
-                    mysqli_close($conexion);
-                    echo '<script>alert("Compra procesada correctamente");
-                document.location.href = "../Interfaz/miperfil.php";
-                </script>';
-                } else {
 
-                }
-            }
         }
-        mysqli_close($conexion);
-      /*  echo '<script>alert("Ha habido algún error en la compra");
-                document.location.href = "../Interfaz/pagoSinExito.php";
-                </script>';*/
-
     }
+    if ($resultado) { //Pago con éxito
+        mysqli_close($conexion);
+        setcookie("ids", '', time() - 60, '/');
+        setcookie("cantidades", '', time() - 60, '/');
+        setcookie("precios", '', time() - 60, '/');
+
+        echo '<script>alert("Compra procesada correctamente");
+        document.location.href = "../Interfaz/miperfil.php";
+        </script>';
+    }
+}
+    mysqli_close($conexion);
+    echo '<script>alert("Ha habido algún error en la compra");
+                document.location.href = "../Interfaz/pagoSinExito.php";
+                </script>';
 }
 
 //Conexion a BBDD

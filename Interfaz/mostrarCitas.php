@@ -103,14 +103,13 @@ if ($conexion->connect_error) {
     <div class="perfil">
 
         <div class="dentro">
-            <ul>
-                <li><img src="../Recursos/reloj.png" width="50px" height="50px"><a href="mostrarCitas.php">Mis
-                        citas</a><br><br>
-                </li>
-                <li><img src="../Recursos/pedidos.png" width="50px" height="50px"><a href="">Mis pedidos</a>
-                </li>
-                <br><br><br><br><br><br>
+            <ul id="atras">
+            <li class="flecha" > <a href="miperfil.php"><img src="../Recursos/atras.png" width="50px" height="50px"></a></li>
 
+                <li  ><img src="../Recursos/reloj.png" width="50px" height="50px"><a href="mostrarCitas.php"> Mis citas</a></li>
+
+<br><br><br><br><br><br>
+</ul>
                 <?php
 $citas = array();
 $horas = array();
@@ -120,42 +119,7 @@ $horas = $_SESSION['horaCita'];
 for ($i = 0; $i < sizeof($citas); $i++) {
     echo '<h3>'.($i+1).': Día: '.$citas[$i].'a las '.$horas[$i].'</h3>';
 }
-?><br>
-        </div>
-        <br>
-
-        </ul>
-        <br><br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br><br>
-        <br>
-        <br>
-        <br><br>
-        <br>
-        <br>
-        <br><br>
-        <br>
-        <br>
-        <br><br>
-        <br>
-        <br>
-        <br>
+?>
 
     </div>
 

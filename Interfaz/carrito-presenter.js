@@ -10,7 +10,7 @@ class CarritoPresenter {
     refresh() {
         console.log(this.model);
         if (this.model.compras.length == 0) {
-            document.getElementById('vaciar').innerHTML='<h2>¡La cesta de la compra está vacía!</h2>';
+            document.getElementById('vaciar').innerHTML = '<h2>¡La cesta de la compra está vacía!</h2>';
         } else {
             let bloqueGrande = document.getElementById('bloqueGrande');
             let suma = 0;
@@ -22,10 +22,10 @@ class CarritoPresenter {
                 console.log(articulo);
                 let bloquePequeño = document.createElement('div');
                 bloquePequeño.innerHTML = '<div id="resumen"><a href="vistaDetallada.php?idA=' + articulo._id + '&nombre=' + articulo._nombre + '&precio='
-                    + articulo._precio + '&logo=' + articulo._logo + '&imagen=' + articulo._imagen + '&color= ' + articulo._color + 
+                    + articulo._precio + '&logo=' + articulo._logo + '&imagen=' + articulo._imagen + '&color= ' + articulo._color +
                     '<p id="pResumen"></p><img id="imagenPequeña" src="../Recursos/' + articulo._imagen + '"></img>'
-                    + '<div id="pCarro"><p id="pResumen2"><strong>' + articulo._nombre.replace(/%20/g, " ") + '</p> &nbsp&nbsp&nbsp&nbsp <p id="pResumen3"></strong>'+ articulo._precio + ' €/ud</p>' +
-                    '<p id="pResumen5">Cantidad: ' + articulo._cantidad + '</p></div>'+'</a></div>';
+                    + '<div id="pCarro"><p id="pResumen2"><strong>' + articulo._nombre.replace(/%20/g, " ") + '</p> &nbsp&nbsp&nbsp&nbsp <p id="pResumen3"></strong>' + articulo._precio + ' €/ud</p>' +
+                    '<p id="pResumen5">Cantidad: ' + articulo._cantidad + '</p></div>' + '</a></div>';
                 //Añadimos precio, color, cantidad, imagen, etc. Replace nos permite reemplazar los %20 de los espacios
                 bloqueGrande.appendChild(bloquePequeño);
 
@@ -36,14 +36,15 @@ class CarritoPresenter {
             bloquePrecio.appendChild(precioTotal);
         }
     }
-    precioTotal(){
-        
-        let suma=0;
+    precioTotal() {
+
+        let suma = 0;
         for (let articulo of this.model.compras) {
             suma += articulo._precio * articulo._cantidad; //Precio total de la compra
+        }
+        return suma;
     }
-    return suma;
+    numeroItems() {
+        return this.model.compras.length;
+    }
 }
-}
-
-/*'<img id="marcaPequeña" src="../Recursos/' + articulo._logo + '"></img>' +*/

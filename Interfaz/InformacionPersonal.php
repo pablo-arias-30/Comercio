@@ -51,17 +51,49 @@
     <a href="../Servidor/cerrarSesion.php"><img id="cerrarSesion" src= "../Recursos/cerrarSesion.png"></a>
     <h2 id="nombrePerfil">Hola, <?php echo $_COOKIE["usuario"] ?></h2>
 
-    <div class="perfil">
+    <div class="informacion">
 
         <div class="dentro">
             <ul>
-            <li><img src="../Recursos/pedidos.png" width="50px" height="50px"><a href=""> Mis pedidos</a></li>
-                <li><img src="../Recursos/reloj.png" width="50px" height="50px"><a href="mostrarCitas.php"> Mis citas</a></li>
+            <li class="flecha" > <a href="miperfil.php"><img src="../Recursos/atras.png" width="50px" height="50px"></a></li>
+
                 <li><img src="../Recursos/usuario.png" width="50px" height="50px"  ><a href="InformacionPersonal.php"> Información Personal</a></li> 
 <br><br><br><br><br><br>
-            </ul>
-        
+</ul>
             
+                <div id="datos" >
+                    <div >
+
+                        <img id="icono-dni" width="70px" height="50px" float="left" src="../Recursos/dni.png" />
+                        <p>DNI:
+                            <?php echo $fila[0] ?>
+                        </p>
+                        <img id="icono-nombre" width="50px" height="50px" float:left src="../Recursos/nombre.png" />
+                        <p>Nombre:
+                            <?php echo $fila[1] ?>
+                        </p>
+                        <img id="icono-nacimiento" width="50px" height="50px" float:left src="../Recursos/calendario.png" />
+                        <p>Fecha de Nacimiento:
+                            <?php echo $fila[6] ?>
+                        </p>
+
+                    </div>
+                    <div >
+                        <img id="icono-telefono" width="50px" height="50px" float=left src="../Recursos/telefono.png" />
+                        <p>Telefono:
+                            <?php echo $fila[2] ?>
+                        </p>
+                        <img id="icono-direccion" width="50px" height="50px" float=left src="../Recursos/home.png" />
+                        <p>Direccion:
+                            <?php echo $fila[3] ?>
+                        </p>
+                        <img id="icono-email" width="50px" height="50px" float=left src="../Recursos/email.png" />
+                        <p>E-mail:
+                            <?php echo $fila[4] ?>
+                        </p>
+</div>
+
+                </div>
         </div>
     </div>
 

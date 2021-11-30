@@ -12,15 +12,6 @@
 
     <script>
     function inicio() {
-
-        modelo = new ComprasApp();
-        console.log(modelo);
-        for (let i = 0; i < modelo.compras.length; i++) {
-            //(this es el documento)
-            document.cookie = "compras" + i + "=" + modelo._compras[i]._id + ";max-age=3600*60; path=/";
-            document.cookie = "cantidades" + i + "=" + modelo._compras[i]._cantidad + ";max-age=3600*60; path=/";
-        }
-
     }
     </script>
 </head>
@@ -33,15 +24,18 @@
 function procesarCantidad($resultado, $conexion, $i, $parar)
 {
     while ($registro = $resultado->fetch_assoc()) {
-        if ($registro["IDArt"] >= 0 && $i == $parar-1) { //Hay stock
-            mysqli_close($conexion);
+        if ($registro["IDArt"] >= 0) { //Hay stock
             //Podemos pagar
-            //Borramos cookies ids compra y cantidades por seguridad y las pasamos a la sesión
-            setcookie("compras", '', time() - 60, '/');
-            setcookie("cantidades", '', time() - 60, '/');
-            setcookie("total", '', time() - 60, '/');
-            echo '<script>document.location.href = "../Interfaz/paypal.php";
+            if ($i == $parar - 1) {
+                //Borramos cookies ids compra y cantidades por seguridad y las pasamos a la sesión
+                setcookie("compras", '', time() - 60, '/');
+                setcookie("cantidades", '', time() - 60, '/');
+                setcookie("total", '', time() - 60, '/');
+                setcookie("precios", '', time() - 60, '/');
+                mysqli_close($conexion);
+                echo '<script>document.location.href = "../Interfaz/paypal.php";
         </script>';
+            }
         } else {
             mysqli_close($conexion);
             echo '<script>alert("Lo sentimos, no hay el stock necesario para su compra");
@@ -68,17 +62,25 @@ if (!empty($_POST["direccion"]) && !empty($_POST["nombreC"])
 
     $ids = array();
     $cantidades = array();
+    $precios = array();
     $i = 0;
-    while (isset($_COOKIE["compras". $i])) {
-        $ids[$i] = $_COOKIE["compras" . $i];
-        $cantidades[$i] = $_COOKIE["cantidades" . $i];
+    $vueltas= $_COOKIE["items"];
+
+    while ($i<$vueltas){
+        $_SESSION["ids"][$i] = $_COOKIE["compras$i"];
+        $_SESSION["cantidades"][$i] = $_COOKIE["cantidades$i"];
+        $_SESSION["precios"][$i] = $_COOKIE["precios$i"];
         $i++;
     }
-    $_SESSION["ids"] = $ids;
-    $_SESSION["cantidades"] = $cantidades;
+    //Copiando arrays
+    for ($i = 0; $i < $vueltas; $i++) {
+        $ids[$i] = $_SESSION["ids"][$i];
+        $cantidades[$i] = $_SESSION["cantidades"][$i];
+        $precios[$i] = $_SESSION["precios"][$i];
+    }
 
 //Conexion a BBDD
-    for ($i = 0; $i < count($ids); $i++) {
+    for ($i = 0; $i < sizeof($ids); $i++) {
         $consulta = "SELECT IDArt FROM articulo WHERE IDArt='$ids[$i]' AND cantidad >= '$cantidades[$i]'";
         $conexion = new mysqli('localhost', 'root', '', 'proyecto comercio');
         $conexion->set_charset('utf8');
@@ -88,7 +90,7 @@ if (!empty($_POST["direccion"]) && !empty($_POST["nombreC"])
             die('Error en la conexion' . $connect_error);
         } else {
             $resultado = mysqli_query($conexion, $consulta);
-            procesarCantidad($resultado, $conexion, $i, count($ids));
+            procesarCantidad($resultado, $conexion, $i, sizeof($ids));
         }
     }
 
