@@ -16,8 +16,9 @@
         modelo = new ComprasApp();
         console.log(modelo);
         for (let i = 0; i < modelo.compras.length; i++) {
-            document.cookie = "compras" + i + "" + '=' + modelo._compras[i]._id +";max-age=3600*60; path=/'";
-            document.cookie = "cantidades" + i + "" + '=' + modelo._compras[i]._cantidad +";max-age=3600*60; path=/'";
+            //(this es el documento)
+            document.cookie = "compras" + i + "=" + modelo._compras[i]._id + ";max-age=3600*60; path=/";
+            document.cookie = "cantidades" + i + "=" + modelo._compras[i]._cantidad + ";max-age=3600*60; path=/";
         }
 
     }
@@ -29,12 +30,16 @@
 
 <?php
 
-function procesarCantidad($resultado, $conexion)
+function procesarCantidad($resultado, $conexion, $i, $parar)
 {
     while ($registro = $resultado->fetch_assoc()) {
-        if ($registro["IDArt"] >=0) { //Hay stock
+        if ($registro["IDArt"] >= 0 && $i == $parar-1) { //Hay stock
             mysqli_close($conexion);
             //Podemos pagar
+            //Borramos cookies ids compra y cantidades por seguridad y las pasamos a la sesión
+            setcookie("compras", '', time() - 60, '/');
+            setcookie("cantidades", '', time() - 60, '/');
+            setcookie("total", '', time() - 60, '/');
             echo '<script>document.location.href = "../Interfaz/paypal.php";
         </script>';
         } else {
@@ -47,7 +52,7 @@ function procesarCantidad($resultado, $conexion)
 }
 
 if (!empty($_POST["direccion"]) && !empty($_POST["nombreC"])
-    && !empty($_POST["telefono"])  && !empty($_POST["ciudad"]) 
+    && !empty($_POST["telefono"]) && !empty($_POST["ciudad"])
     && !empty($_POST["codigoPostal"]) && !empty($_POST["provincia"])) {
 
 //Comprobamos que haya stock
@@ -64,18 +69,13 @@ if (!empty($_POST["direccion"]) && !empty($_POST["nombreC"])
     $ids = array();
     $cantidades = array();
     $i = 0;
-    while (isset($_COOKIE["compras" . $i])) {
+    while (isset($_COOKIE["compras". $i])) {
         $ids[$i] = $_COOKIE["compras" . $i];
         $cantidades[$i] = $_COOKIE["cantidades" . $i];
         $i++;
     }
     $_SESSION["ids"] = $ids;
     $_SESSION["cantidades"] = $cantidades;
-//Borramos cookies ids compra y cantidades por seguridad y las pasamos a la sesión
-    setcookie("compras", '', time() - 60, '/');
-    setcookie("cantidades", '', time() - 60, '/');
-    setcookie("total", '', time() - 60, '/');
-
 
 //Conexion a BBDD
     for ($i = 0; $i < count($ids); $i++) {
@@ -88,7 +88,7 @@ if (!empty($_POST["direccion"]) && !empty($_POST["nombreC"])
             die('Error en la conexion' . $connect_error);
         } else {
             $resultado = mysqli_query($conexion, $consulta);
-            procesarCantidad($resultado, $conexion);
+            procesarCantidad($resultado, $conexion, $i, count($ids));
         }
     }
 
