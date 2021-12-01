@@ -22,25 +22,26 @@
 
 function procesarCantidad($resultado, $conexion, $i, $parar)
 {
+    $correcto = false;
     while ($registro = $resultado->fetch_assoc()) {
         if ($registro["IDArt"] >= 0) { //Hay stock
-            //Podemos pagar
+            $correcto = true; //Hay stock del artículo
             if ($i == $parar - 1) {
-                //Borramos cookies ids compra y cantidades por seguridad y las pasamos a la sesión
+                //Hemos comprobado todos los artículos de forma satisfactoria
+                //Borramos cookies ids compra y cantidades por seguridad
                 setcookie("compras", '', time() - 60, '/');
                 setcookie("cantidades", '', time() - 60, '/');
                 setcookie("total", '', time() - 60, '/');
                 setcookie("precios", '', time() - 60, '/');
                 mysqli_close($conexion);
-                echo '<script>document.location.href = "../Interfaz/paypal.php";
-        </script>';
+                echo '<script>document.location.href = "../Interfaz/paypal.php";</script>';
             }
-        } else {
-            mysqli_close($conexion);
-            echo '<script>alert("Lo sentimos, no hay el stock necesario para su compra");
-            document.location.href = "../Interfaz/carrito.php";
-            </script>';
         }
+    }if (!$correcto) {
+        mysqli_close($conexion);
+        echo '<script>alert("Lo sentimos, no hay el stock necesario para su compra");
+    document.location.href = "../Interfaz/carrito.php";
+    </script>';
     }
 }
 
