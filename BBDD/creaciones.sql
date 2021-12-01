@@ -58,7 +58,7 @@ CREATE TABLE IF NOT EXISTS compra (
   IDCompra integer(15) PRIMARY KEY,
   fechaCompra date NOT NULL,
   precio float(7, 2) NOT NULL,
-  direccionEnvio varchar (60) NOT NULL,
+  direccionEnvio varchar (200) NOT NULL,
   fechaPago date NOT NULL,
   dniCliente char(9) NOT NULL REFERENCES cliente (dni) ON UPDATE CASCADE
 );
