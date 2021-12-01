@@ -12,7 +12,7 @@ class AgregarArticuloPresenter {
         let id = leerCookie("idA");
         let nombre = leerCookie("nombre");
         let logo = leerCookie("logo");
-        let precio = leerCookie("precio");
+        let precio = leerCookie("PVP");
         let imagen = leerCookie("imagen");
         let color = leerCookie("color");
         let cantidad = document.getElementById('cantidad').value;

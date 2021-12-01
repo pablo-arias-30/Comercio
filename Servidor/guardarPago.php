@@ -11,8 +11,7 @@
 
 
     <script>
-    function inicio() {
-    }
+    function inicio() {}
     </script>
 </head>
 
@@ -39,14 +38,10 @@ function procesarCantidad($resultado, $conexion, $i, $parar)
         } else {
             mysqli_close($conexion);
             echo '<script>alert("Lo sentimos, no hay el stock necesario para su compra");
-        document.location.href = "../Interfaz/carrito.php";
-        </script>';
+            document.location.href = "../Interfaz/carrito.php";
+            </script>';
         }
     }
-    mysqli_close($conexion);
-    echo '<script>alert("Lo sentimos, no hay el stock necesario para su compra");
-document.location.href = "../Interfaz/carrito.php";
-</script>';
 }
 
 if (!empty($_POST["direccion"]) && !empty($_POST["nombreC"])
@@ -68,9 +63,9 @@ if (!empty($_POST["direccion"]) && !empty($_POST["nombreC"])
     $cantidades = array();
     $precios = array();
     $i = 0;
-    $vueltas= $_COOKIE["items"];
+    $vueltas = $_COOKIE["items"];
 
-    while ($i<$vueltas){
+    while ($i < $vueltas) {
         $_SESSION["ids"][$i] = $_COOKIE["compras$i"];
         $_SESSION["cantidades"][$i] = $_COOKIE["cantidades$i"];
         $_SESSION["precios"][$i] = $_COOKIE["precios$i"];
@@ -86,7 +81,6 @@ if (!empty($_POST["direccion"]) && !empty($_POST["nombreC"])
 //Conexion a BBDD
     for ($i = 0; $i < sizeof($ids); $i++) {
         $consulta = "SELECT IDArt FROM articulo WHERE IDArt='$ids[$i]' AND cantidad >= '$cantidades[$i]'";
-        echo $consulta;
         $conexion = new mysqli('localhost', 'root', '', 'proyecto comercio');
         $conexion->set_charset('utf8');
 

@@ -61,7 +61,7 @@ setcookie("nombre", "$nombre", time() + 86400, "/");
 setcookie("color", "$color", time() + 86400, "/");
 setcookie("logo", "$logo", time() + 86400, "/");
 setcookie("idA", "$id", time() + 86400, "/");
-setcookie("precio", "$precio", time() + 86400, "/");?>
+setcookie("PVP", "$precio", time() + 86400, "/");?>
 
     <div id="gafasphp">
     <h2 id="nombre"><?php echo $nombre ?></h2>
