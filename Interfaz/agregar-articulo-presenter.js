@@ -36,6 +36,7 @@ class AgregarArticuloPresenter {
         let cont = this.model.compras.length;
         let carrito = document.getElementById('cesta');
         carrito.innerHTML = cont;
+        document.cookie = 'items=' + this.model.compras.length +' ;max-age=3600*60; path=/';
 
     }
 

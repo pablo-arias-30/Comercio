@@ -15,6 +15,7 @@ class BorrarCestaPresenter {
         let carrito = document.getElementById('cesta');
         carrito.innerHTML = cont;
         alert("¡Carrito vaciado!");
+        document.cookie = 'items=' + this.model.compras.length +' ;max-age=3600*60; path=/';
     }
 
 }

@@ -26,7 +26,7 @@
         presenterNumeroCarrito.refresh();
 
         modelo = new ComprasApp();
-/
+
         for (let i = 0; i < modelo.compras.length; i++) {
             document.cookie = "compras" + i + "=" + modelo._compras[i]._id + ";max-age=3600*60; path=/";
             document.cookie = "precios" + i + "=" + modelo._compras[i]._precio + ";max-age=3600*60; path=/";
@@ -36,8 +36,6 @@
         console.log(total);
         document.cookie = 'total=' + total +' ;max-age=3600*60; path=/';
         document.cookie = 'items=' + presenterVistaCarrito.numeroItems() +' ;max-age=3600*60; path=/';
-
-
     }
     </script>
 
@@ -46,7 +44,6 @@
 <body onload="inicio()">
 
 <?php 
-
 
 setcookie("total", '', time() - 60);
 setcookie("precio", '', time() - 60, '/');
@@ -57,6 +54,8 @@ for($i=0;$i<$_COOKIE["items"];$i++){
     setcookie("precios$i", '', time() - 60, '/');
     
 }
+setcookie("items", '', time() - 60, '/');
+
 
 ?>
 

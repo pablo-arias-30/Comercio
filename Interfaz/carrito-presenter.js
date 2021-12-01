@@ -8,6 +8,7 @@ class CarritoPresenter {
 
 
     refresh() {
+        document.cookie = 'items=' + this.model.compras.length +' ;max-age=3600*60; path=/';
         console.log(this.model);
         if (this.model.compras.length == 0) {
             document.getElementById('vaciar').innerHTML = '<h2>¡La cesta de la compra está vacía!</h2>';
