@@ -44,9 +44,14 @@ function procesarCompra($dni, $conexion)
     }
     if ($resultado) { //Pago con éxito
         mysqli_close($conexion);
-        setcookie("ids", '', time() - 60, '/');
-        setcookie("cantidades", '', time() - 60, '/');
-        setcookie("precios", '', time() - 60, '/');
+        for ($i = 0; $i < sizeof($ids); $i++) {
+            setcookie("compras$i", '', time() - 60, '/');
+            setcookie("cantidades$i", '', time() - 60, '/');
+            setcookie("precios$i", '', time() - 60, '/');
+            
+        }
+        setcookie("items", '', time() - 60, '/');
+        setcookie("total", '', time() - 60);
 
         echo '<script>alert("Compra procesada correctamente");
         document.location.href = "../Interfaz/miperfil.php";

@@ -86,6 +86,7 @@ if (!empty($_POST["direccion"]) && !empty($_POST["nombreC"])
 //Conexion a BBDD
     for ($i = 0; $i < sizeof($ids); $i++) {
         $consulta = "SELECT IDArt FROM articulo WHERE IDArt='$ids[$i]' AND cantidad >= '$cantidades[$i]'";
+        echo $consulta;
         $conexion = new mysqli('localhost', 'root', '', 'proyecto comercio');
         $conexion->set_charset('utf8');
 

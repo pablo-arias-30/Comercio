@@ -26,19 +26,16 @@
         presenterNumeroCarrito.refresh();
 
         modelo = new ComprasApp();
-        console.log(modelo);
+/
         for (let i = 0; i < modelo.compras.length; i++) {
-            //(this es el documento)
             document.cookie = "compras" + i + "=" + modelo._compras[i]._id + ";max-age=3600*60; path=/";
             document.cookie = "precios" + i + "=" + modelo._compras[i]._precio + ";max-age=3600*60; path=/";
             document.cookie = "cantidades" + i + "=" + modelo._compras[i]._cantidad + ";max-age=3600*60; path=/";
         }
-        
         let total = presenterVistaCarrito.precioTotal();
         console.log(total);
-        document.cookie = 'total=' + total + ' ;max-age=3600*60; path=/';
-        let items = presenterVistaCarrito.numeroItems();
-        document.cookie = 'items=' + items + ' ;max-age=3600*60; path=/';
+        document.cookie = 'total=' + total +' ;max-age=3600*60; path=/';
+        document.cookie = 'items=' + presenterVistaCarrito.numeroItems() +' ;max-age=3600*60; path=/';
 
 
     }
@@ -47,6 +44,21 @@
 </head>
 
 <body onload="inicio()">
+
+<?php 
+
+
+setcookie("total", '', time() - 60);
+setcookie("precio", '', time() - 60, '/');
+
+for($i=0;$i<$_COOKIE["items"];$i++){
+    setcookie("compras$i", '', time() - 60, '/');
+    setcookie("cantidades$i", '', time() - 60, '/');
+    setcookie("precios$i", '', time() - 60, '/');
+    
+}
+
+?>
 
     <a href="index.html"><img id="imimagen" src="../Recursos/VISUALVISION.png"></a>
     <a href="carrito.php"><img id="compra" src="../Recursos/carrito.png"></a>
