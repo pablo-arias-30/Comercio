@@ -55,7 +55,7 @@
 
         <div class="dentro">
             <ul>
-            <li><img src="../Recursos/pedidos.png" width="50px" height="50px"><a href=""> Mis pedidos</a></li>
+            <li><img src="../Recursos/pedidos.png" width="50px" height="50px"><a href="mostrarPedidos.php"> Mis pedidos</a></li>
                 <li><img src="../Recursos/reloj.png" width="50px" height="50px"><a href="mostrarCitas.php"> Mis citas</a></li>
                 <li><img src="../Recursos/usuario.png" width="50px" height="50px"  ><a href="InformacionPersonal.php"> Información Personal</a></li> 
 <br><br><br><br><br><br>
