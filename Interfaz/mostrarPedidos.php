@@ -112,7 +112,7 @@
         <div>
             <h3 id="pedido"><?php echo ' ID Compra: ' .$registro['IDCompra'].
             ' - Fecha de Compra: ' .$registro['fechaCompra']. 
-            '$ - Direccion de Envio: ' .$registro['direccionEnvio']?></h3>
+            ' - Direccion de Envio: ' .$registro['direccionEnvio']?></h3>
             
 
         </div>
