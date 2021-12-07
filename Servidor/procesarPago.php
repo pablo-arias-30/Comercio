@@ -31,6 +31,7 @@ function procesarCompra($dni, $conexion)
     $resultado = mysqli_query($conexion, $consulta);
 
     if ($resultado) {
+        $ids = array_unique($ids); //Eliminamos ids de artículos duplicados
         for ($i = 0; $i < count($ids); $i++) {
             $consulta = 'UPDATE articulo SET cantidad =(cantidad - ' . $cantidades[$i] . ') WHERE IDArt = ' . $ids[$i];
             $resultado = mysqli_query($conexion, $consulta);
