@@ -18,8 +18,7 @@ CREATE TABLE articulo (
   imagen varchar (150),
   cantidad integer (10),
   codA integer(10) NOT NULL REFERENCES almacen(codA) ON UPDATE CASCADE,
-  codP integer (20) NOT NULL REFERENCES proveedor(codP) ON UPDATE CASCADE,
-  IDCompra integer (15) REFERENCES compra (IDCompra) ON UPDATE CASCADE
+  codP integer (20) NOT NULL REFERENCES proveedor(codP) ON UPDATE CASCADE
 );
 
 CREATE TABLE IF NOT EXISTS almacen (
@@ -56,17 +55,17 @@ CREATE TABLE IF NOT EXISTS cliente (
 
 CREATE TABLE IF NOT EXISTS compra (
   IDCompra integer(15) PRIMARY KEY,
-  fechaCompra date NOT NULL,
+  fechaCompra DATETIME NOT NULL,
   precio float(7, 2) NOT NULL,
   direccionEnvio varchar (200) NOT NULL,
-  fechaPago date NOT NULL,
+  fechaPago DATETIME NOT NULL,
   dniCliente char(9) NOT NULL REFERENCES cliente (dni) ON UPDATE CASCADE
 );
 
 CREATE TABLE IF NOT EXISTS lineacompra(
   IDLineaCompra integer(15) primary key,
   unidades integer NOT NULL,
-  precio float(7, 2) NOT NULL,
+  precioUnidad float(7, 2) NOT NULL,
   IDCompra integer(15) NOT NULL REFERENCES compra (IDCompra) ON UPDATE CASCADE,
   IDArt integer (10) NOT NULL REFERENCES articulo (IDArt) ON UPDATE CASCADE
 );

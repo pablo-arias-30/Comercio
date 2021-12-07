@@ -25,19 +25,19 @@ INSERT INTO proveedor VALUES
  INSERT INTO almacen VALUES 
 (1,'Madrid',3000),(2,'Valencia',2300),(3,'Albacete',2500);
 
-INSERT INTO articulo (IDArt, nombre, marca, tipo, precio, color, codA, codP, IDCompra,logo,imagen,cantidad) VALUES
-(1, 'Gafas de sol graduadas deluxe Tommy Hilfiger', 'Tommy Hilfiger', 'Gafas de sol', '120','Negro','1','1' ,'1','Tommy-Hilfiger-logo.png','gafasDeSol1.png',20),
-(2, 'Gafas de sol Polaroid', 'Polaroid', 'Gafas de sol', '50','Gris','1','2', '2','logo-polaroid.png','gafas2.png',20),
-(3, 'Gafas de sol Carrera', 'Carrera', 'Gafas de sol', '60','Negro','1','2', '3','logo-carrera.png','gafas3.png',19),
-(4, 'Gafas de sol Tommy Hilfiger premium', 'Tommy Hilfiger', 'Gafas de sol', '200','Negro','1','1' ,'','Tommy-Hilfiger-logo.png','gafas4.jpg',18),
-(7, 'Gafas progresivas Carolina Herrera','Carolina Herrera', 'Gafas progresivas', '187.50','Azul', '2', '1', '','carolina.png','gafas9.png',63),
-(6, 'Gafas de cerca Ray-Ban', 'Ray-Ban', 'Gafas de cerca', '180', 'Dorado','3', '3','4','RAYBAN_LOGO.png','gafas6.png',65),
-(8, 'Gafas graduadas Carolina Herrera','Carolina Herrera', 'Gafas progresivas', '215.90','Rosa', '2', '1', '','carolina.png','gafas8.png',77),
-(9, 'Gafas progresivas Lacoste', 'Lacoste', 'Gafas progresivas', '90','Negro', '3', '2','1','Lacoste-Logo.png','gafas7.png',56),
-(10, 'Lentillas 009','Biofinity', 'lentillas', '95.90','N/A', '2', '1', '','biofinity-logo.png','fotoLentillas.jpg',98),
-(11, 'Liquido 350ml 010','Biofinity', 'liquidos', '15.50','N/A', '3', '1', '','biofinity-logo.png','liquido.png',123),
-(16, 'Gafas de sol Polaroid', 'Polaroid', 'Gafas de sol', '50','Gris','1','2', '6','logo-polaroid.png','gafas2.png',20),
-(17, 'Gafas de sol Carrera', 'Carrera', 'Gafas de sol', '60','Negro','1','2', '7','logo-carrera.png','gafas3.png',19);
+INSERT INTO articulo (IDArt, nombre, marca, tipo, precio, color, codA, codP,logo,imagen,cantidad) VALUES
+(1, 'Gafas de sol graduadas deluxe Tommy Hilfiger', 'Tommy Hilfiger', 'Gafas de sol', '120','Negro','1','1','Tommy-Hilfiger-logo.png','gafasDeSol1.png',20),
+(2, 'Gafas de sol Polaroid', 'Polaroid', 'Gafas de sol', '50','Gris','1','2','logo-polaroid.png','gafas2.png',20),
+(3, 'Gafas de sol Carrera', 'Carrera', 'Gafas de sol', '60','Negro','1','2','logo-carrera.png','gafas3.png',19),
+(4, 'Gafas de sol Tommy Hilfiger premium', 'Tommy Hilfiger', 'Gafas de sol', '200','Negro','1','1' ,'Tommy-Hilfiger-logo.png','gafas4.jpg',18),
+(7, 'Gafas progresivas Carolina Herrera','Carolina Herrera', 'Gafas progresivas', '187.50','Azul', '2', '1','carolina.png','gafas9.png',63),
+(6, 'Gafas de cerca Ray-Ban', 'Ray-Ban', 'Gafas de cerca', '180', 'Dorado','3', '3','RAYBAN_LOGO.png','gafas6.png',65),
+(8, 'Gafas graduadas Carolina Herrera','Carolina Herrera', 'Gafas progresivas', '215.90','Rosa', '2', '1','carolina.png','gafas8.png',77),
+(9, 'Gafas progresivas Lacoste', 'Lacoste', 'Gafas progresivas', '90','Negro', '3', '2','Lacoste-Logo.png','gafas7.png',56),
+(10, 'Lentillas 009','Biofinity', 'lentillas', '95.90','N/A', '2', '1','biofinity-logo.png','fotoLentillas.jpg',98),
+(11, 'Liquido 350ml 010','Biofinity', 'liquidos', '15.50','N/A', '3', '1','biofinity-logo.png','liquido.png',123),
+(16, 'Gafas de sol Polaroid', 'Polaroid', 'Gafas de sol', '50','Gris','1','2','logo-polaroid.png','gafas2.png',20),
+(17, 'Gafas de sol Carrera', 'Carrera', 'Gafas de sol', '60','Negro','1','2', 'logo-carrera.png','gafas3.png',19);
 
 
 INSERT INTO suministra VALUES
