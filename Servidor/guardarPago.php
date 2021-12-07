@@ -59,6 +59,9 @@ if (!empty($_POST["direccion"]) && !empty($_POST["nombreC"])
     $_SESSION["ciudad"] = $_POST["ciudad"];
     $_SESSION["provincia"] = $_POST["provincia"];
     $_SESSION["total"] = $_COOKIE["total"];
+    
+    unset($_SESSION["ids"]); //Restablecemos los ids de los productos
+
 
     $ids = array();
     $cantidades = array();
