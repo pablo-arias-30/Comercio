@@ -24,10 +24,10 @@ function procesarCompra($dni, $conexion)
     }
 
     $direccion = $_SESSION["direccion"] . ", ".$_SESSION["codigoPostal"] .", ". $_SESSION["ciudad"] .", ". $_SESSION["provincia"];
-    $fecha = date("y/m/d");
+    $fecha = date("y/m/d/H:i:s");
     $total = $_SESSION["total"];
     $idCompra = rand(1, 9999); //Genera ID único automáticamente
-    $consulta = "INSERT INTO compra values ( $idCompra , '$fecha ', '$total', '$direccion', '$fecha', ' $dni');";
+    $consulta = "INSERT INTO compra values ( $idCompra , '$fecha ', '$total', '$direccion', '$fecha', '$dni');";
     $resultado = mysqli_query($conexion, $consulta);
 
     if ($resultado) {

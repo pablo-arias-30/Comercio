@@ -14,7 +14,8 @@
 #resumen {
     margin-top: 80px;
     margin-left: 280px;
-    margin-bottom: 0px;;
+    margin-bottom: 0px;
+    ;
     padding: 1em;
     width: 950px;
     height: 130px;
@@ -113,6 +114,7 @@
     height: 400px;
     width: 400px;
 }
+
 #imagenPedido {
     margin-left: 1%;
     height: 150px;
@@ -132,9 +134,11 @@
     width: 220px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
 h3 {
     font-family: sans-serif;
 }
+
 #id {
     text-align: center;
     width: 220px;
@@ -185,6 +189,7 @@ h3 {
     top: 130px;
     width: 150px;
 }
+
 #cancelarCompra {
     position: absolute;
     right: 90px;
@@ -361,16 +366,18 @@ ul, li {
     margin-top: 2%;
     margin-left: 18%;
     margin-right: 5%;
-    height: 300px;;
+    height: 300px;
+    ;
     border: 2px;
     border-color: black;
     border-style: solid;
 }
+
 .informacion {
     margin-top: 2%;
     margin-left: 18%;
     margin-right: 5%;
-    height: 500px;;
+    height: 100%;
     border: 2px;
     border-color: black;
     border-style: solid;
@@ -388,7 +395,10 @@ ul, li {
     margin-right: 13%;
 }
 
-.dentro{margin-left: 30px;}
+.dentro {
+    margin-left: 30px;
+}
+
 .dentro ul {
     height: 100px;
     padding-left: 20px;
@@ -478,6 +488,7 @@ ul, li {
     text-decoration: underline;
     background: #E42823;
 }
+
 #cancelar {
     width: 100%;
     background: red;
@@ -521,7 +532,8 @@ ul, li {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 24px;
 }
-#datos{
+
+#datos {
     text-align: center;
     display: flex;
     flex-direction: row;
@@ -529,30 +541,52 @@ ul, li {
 }
 
 
-#datos > div {
+#datos>div {
     width: 50%;
-  }
-  #atras li{
-    display:inline;
-    padding-left:3px;
-    padding-right:3px;
-  }
-  .flecha{
-float:right;  }
+}
+
+#atras li {
+    display: inline;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.flecha {
+    float: right;
+}
 
 
-#datosPedido{
-    
+#datosPedido {
+
     font-family: sans-serif;
     font-size: 18px;
     margin-left: 200px;
 }
+
 #hPedido {
-    margin-bottom: 50px;
+    margin-top: 3px;
+    margin-bottom: 0px;
+    font-family: sans-serif;
+    font-weight: lighter;
 }
-#pedido{
+
+#pedido {
     color: black;
+    font-family: sans-serif;
+    font-weight: lighter;
 }
-#aPedido{
-    color: white;
+
+#aPedido {
+    color: transparent;
+    text-decoration: none;
+    height: 10px;
+    width: auto;
+    
+}
+#aPedido h3{
+    margin-right:30px;
+    padding:3px;
+    border: 2px;
+    border-color: black;
+    border-style: solid;
 }
