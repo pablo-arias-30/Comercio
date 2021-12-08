@@ -1,4 +1,8 @@
+<?php include_once("analyticstracking.php") ?>
+<?php session_start();?>
+    
 <?php
+
 //Conexion a BBDD
 $consulta = "SELECT * FROM articulo WHERE tipo ='lentillas' || tipo = 'liquidos' AND cantidad >0";
 $conexion = new mysqli('localhost', 'root', '', 'proyecto comercio');

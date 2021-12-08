@@ -1,4 +1,6 @@
 <?php session_start();?>
+<?php include_once("analyticstracking.php") ?>
+
 <?php
 //Conexion a BBDD
 $consulta = "SELECT * FROM articulo WHERE tipo ='Gafas de cerca' || tipo = 'Gafas progresivas' AND cantidad >0";

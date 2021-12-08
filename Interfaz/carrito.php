@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <?php session_start();?>
+<?php include_once("analyticstracking.php") ?>
+
 
 <head>
     <meta charset=utf-8 />
@@ -43,6 +45,7 @@
 </head>
 
 <body onload="inicio()">
+<?php include_once "analyticstracking.php"?>
 
     <?php
 

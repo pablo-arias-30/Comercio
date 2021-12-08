@@ -1,4 +1,4 @@
-
+<?php include_once("analyticstracking.php") ?>
 <?php session_start();?>
 <?php if (!isset($_COOKIE["usuario"])) { //Aún no se ha iniciado sesión
     echo '<script type="text/javascript">

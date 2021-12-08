@@ -1,3 +1,5 @@
+<?php include_once("analyticstracking.php") ?>
+
 <?php session_start(); ?>
 
 <!DOCTYPE html>

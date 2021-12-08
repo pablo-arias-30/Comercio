@@ -1,3 +1,4 @@
+
 <?php
 //Borramos las cookies para que cuando intentemos ir a nuestro perfil, no nos deje, ya que nos llevará a iniciar sesión
 unset($_COOKIE["usuario"]);

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<?php include_once("analyticstracking.php") ?>
 <?php session_start();?>
 <head>
     <meta charset=utf-8 />
