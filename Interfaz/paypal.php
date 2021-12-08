@@ -75,7 +75,7 @@
                 <input type="hidden" name="item_name" value="Compra en VISUALVISION">
                 <input type="hidden" name="currency_code" value="EUR">
                 <input type="hidden" name="business_name" value="VISUALVISION">
-                <input type="hidden" name="return" value="http://localhost/Servidor/procesarPago.php">
+                <input type="hidden" name="return" value="http://127.0.0.1/Servidor/procesarPago.php">
                 <input type="hidden" name="paymentaction" value="sale">
                 <input type="hidden" name="first_name" value='<?php echo $_SESSION['nombreC'] ?>'>
                 <input type="hidden" name="amount" value='<?php echo $_SESSION["total"] ?>'>
