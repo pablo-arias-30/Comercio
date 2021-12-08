@@ -8,13 +8,7 @@ INSERT INTO cliente (dni, nombre, telefono, direccion, correo, nacimiento, gradu
 ( '03203593S', 'David Bisbal', 601522533,'Calle Cuenca, 45', 'bisbi@comercio.es', '1999/05/22','','bisbal'),
 ( '14635054Q', 'Luuk de Jong', 911885400, 'Calle Pizarro, 33', 'luuk@comercio.es','1975/08/24','','luk' );
 
-INSERT INTO compra (IDCompra, fechaCompra, precio, direccionEnvio, fechaPago, dniCliente) VALUES 
-(1,'2021/03/21','210','Avenida de España 43, Albacete','2021/03/22','49256124Y'),
-(2,'2021/03/26','50','Calle Simón 28, Ciudad Real','2021/03/26','32145654Y'),
-(3,'2021/04/01','60','Calle Juan Gabriel 15, Murcia','2021/04/07','06452314S'),
-(4,'2021/04/22','367.5','Calle Sanabria 20, Alcázar de San Juan','2021/04/23','07145362T'),
-(6,'2021/05/02','210','Avenida de España 43, Albacete','2021/03/22','74560661C'),
-(7,'2021/03/26','50','Calle Simón 28, Ciudad Real','2021/03/26','03203593S');
+
 
 INSERT INTO proveedor VALUES
  (1,'GafasXXL','Albacete','652369852', 12, 18),
@@ -35,21 +29,12 @@ INSERT INTO articulo (IDArt, nombre, marca, tipo, precio, color, codA, codP,logo
 (8, 'Gafas graduadas Carolina Herrera','Carolina Herrera', 'Gafas progresivas', '215.90','Rosa', '2', '1','carolina.png','gafas8.png',77),
 (9, 'Gafas progresivas Lacoste', 'Lacoste', 'Gafas progresivas', '90','Negro', '3', '2','Lacoste-Logo.png','gafas7.png',56),
 (10, 'Lentillas 009','Biofinity', 'lentillas', '95.90','N/A', '2', '1','biofinity-logo.png','fotoLentillas.jpg',98),
-(11, 'Liquido 350ml 010','Biofinity', 'liquidos', '15.50','N/A', '3', '1','biofinity-logo.png','liquido.png',123),
-(16, 'Gafas de sol Polaroid', 'Polaroid', 'Gafas de sol', '50','Gris','1','2','logo-polaroid.png','gafas2.png',20),
-(17, 'Gafas de sol Carrera', 'Carrera', 'Gafas de sol', '60','Negro','1','2', 'logo-carrera.png','gafas3.png',19);
+(11, 'Liquido 350ml 010','Biofinity', 'liquidos', '15.50','N/A', '3', '1','biofinity-logo.png','liquido.png',123);
 
 
 INSERT INTO suministra VALUES
  (1,2),(1,3),(3,5),(2,4),(4,1);
 
- INSERT INTO lineacompra VALUES 
-('11','3',350.3,'1','2'),
-('12','1',150,'2','1'),
-('13','2',230.75,'3','3'),
-('14','1',180.55,'4','5'),
-('16','3',350.3,'6','2'),
-('17','1',150,'7','1');
 
 INSERT INTO contiene VALUES 
 (1,1), (2,3), (3,1), (4,3), (5,2);
