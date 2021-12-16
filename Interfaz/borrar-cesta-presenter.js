@@ -17,5 +17,8 @@ class BorrarCestaPresenter {
         alert("¡Carrito vaciado!");
         document.cookie = 'items=' + this.model.compras.length +' ;max-age=3600*60; path=/';
     }
+    borrarCompras(){ //Borra todo el localStorage
+        this.model.borrarCompras();
+    }
 
 }

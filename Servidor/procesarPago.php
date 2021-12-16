@@ -56,7 +56,7 @@ function procesarCompra($dni, $conexion)
             setcookie("total", '', time() - 60);
 
             echo '<script>alert("Compra procesada correctamente");
-        document.location.href = "../Interfaz/mostrarPedidos.php";
+        document.location.href = "../Servidor/borrarCesta.php";
         </script>';
         }
     }

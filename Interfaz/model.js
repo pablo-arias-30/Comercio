@@ -10,6 +10,9 @@ class DB {
         if (m != undefined) return JSON.parse(localStorage.getItem('model'));
         else m;
     }
+    static clear(){
+        localStorage.clear();
+    }
 }
 
 
@@ -40,18 +43,8 @@ class ComprasApp {
         DB.serialize({ compras: this._compras });
         return result;
     }
-    borrarTarea(id) {
-        this.compras = this.compras.filter((articulo) => articulo._id != id); //Deserializa, devuelve un array con todos los que cumplen la condicion de no tener ese id, y se vuelven a serializar con el setter
-        //parte izq getter, derecha settter
-
-
-        // let tarea = this.tareas.find((tarea) => { return tarea.id == id }); //esta mal hecho
-        // let index = this.tareas.indexOf(tarea); //devuelve indice, como el this hace un get, deserializa creando otro objeto cada vez
-        // this._tareas.splice(index, 1);
-        //console.log(this._tareas); //para saber si lo borro o no
-        // DB.serialize({ tareas: this._tareas });
-
-
+    borrarCompras(){ //Borra las compras del LocalStorage
+        DB.clear();
     }
     modificarArticulo(id, cantidad) {
         let articulo = this.compras.find((articulo) => { return articulo._id == id });
