@@ -17,7 +17,7 @@
         // presenter.init();
         presenter = new AgregarArticuloPresenter(new ComprasApp(),
             document
-        ); //document porque el id esta dentro y solo nos interesa el id de la tarea para mostrar el mensaje de que se ha borrado
+        ); //
         console.log(presenter.model);
         presenter.refresh();
     }

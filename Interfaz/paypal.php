@@ -17,14 +17,14 @@
     function inicio() {
         presenterNumeroCarrito = new AgregarArticuloPresenter(new ComprasApp(),
             document
-        ); //document porque el id esta dentro y solo nos interesa el id de la tarea para mostrar el mensaje de que se ha borrado
+        ); //
         presenterNumeroCarrito.refresh();
         presenterBorrarCarrito = new BorrarCestaPresenter(new ComprasApp(),
             document
-        ); //document porque el id esta dentro y solo nos interesa el id de la tarea para mostrar el mensaje de que se ha borrado
+        ); //
         presenterVistaCarrito = new CarritoPresenter(new ComprasApp(),
             document
-        ); //document porque el id esta dentro y solo nos interesa el id de la tarea para mostrar el mensaje de que se ha borrado
+        ); //
 
     }
     </script>
